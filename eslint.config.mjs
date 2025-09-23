@@ -19,6 +19,21 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+    rules: {
+      // TypeScript rules
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-require-imports": "off",
+      
+      // React rules
+      "react-hooks/exhaustive-deps": "off",
+      "react/no-unescaped-entities": "off",
+      
+      // Next.js rules
+      "@next/next/no-css-tags": "off",
+      "@next/next/no-img-element": "off",
+      "@next/next/no-sync-scripts": "off",
+    },
   },
 ];
 

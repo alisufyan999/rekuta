@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Center: Nav */}
         <div 
-          className={`collapse navbar-collapse justify-content-center ${isMenuOpen ? 'show' : ''}`} 
+          className={`navbar-collapse justify-content-center ${isMenuOpen ? 'show' : ''}`} 
           id="mainNav"
         >
           <ul className="navbar-nav gap-lg-4 gap-3 align-items-lg-center">
