@@ -1,7 +1,7 @@
 import ServiceHero from "@/components/ServiceDetails/ServiceHero";
 import AboutSection from "@/components/ServiceDetails/AboutSection";
 import ExpertiseSection from "@/components/ServiceDetails/ExpertiseSection";
-import Organization from "@/components/ServiceDetails/Organization";
+// import Organization from "@/components/ServiceDetails/Organization";
 import WhyChoose from "@/components/ServiceDetails/WhyChoose";
 import { servicesData } from "@/data/servicesData";
 
@@ -38,14 +38,14 @@ export default function ServiceDetailPage({ params }: Props) {
         <ExpertiseSection heading={svc.expertise.heading} items={svc.expertise.items} />
       )}
 
-      {svc.organizations && (
+      {/* {svc.organizations && (
         <Organization
           heading={svc.organizations.heading}
           row1={svc.organizations.row1}
           row2={svc.organizations.row2}
           row3={svc.organizations.row3}
         />
-      )}
+      )} */}
 
       {svc.whyChoose && (
         <WhyChoose
