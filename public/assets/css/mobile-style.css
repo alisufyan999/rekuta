@@ -1,0 +1,80 @@
+@media (max-width:650px){
+   
+	.hero-wrap > .row{
+        gap: 1rem 0;
+    }
+    .subscribeform{
+        display: grid !important;
+    }
+
+    /*About Page CSS*/
+    .rekuta-hero .display-4{
+        font-size: 2rem;
+      }
+      .ai-hero{ min-height: 460px; }
+      .ai-card-analytics{ top: 40px; left: 0; }
+      .ai-card-jobs{ top: 20px; right: 0; }
+      .ai-card-interview{ right: 0; top: 200px; }
+      .ai-card-congrats{ left: 0; bottom: 0; }
+
+      .ai-hero{ min-height: 420px; }
+  .ai-card-analytics{ width: 200px; }
+  .ai-card-jobs{ width: 150px; }
+  .ai-card-interview{ width: 210px; }
+ 
+  .about-tile{ padding: 14px !important; }
+
+  .rw-person{ max-height:280px; }
+    .rw-card-right{ right:2%; top:32%; }
+    .rw-card-bottom{ left:2%; bottom:4%; }
+
+    .rw-hero{ border-radius:18px; }
+    .rw-fab{ display:none !important; }
+    .rw-card-right, .rw-card-bottom{
+      position:static; margin-top:.5rem;
+    }
+    .rw-person{ margin-top:.75rem; }
+
+    /*Contact Page CSS*/
+    .cta-title{ font-size: 1.05rem; }
+
+    .contact-panel{ padding: 16px !important; }
+
+    .leaflet{ height: 260px; }
+
+    .svc-card{ padding: 14px !important; }
+
+    .stats-hero{ padding: 18px !important; border-radius: 16px !important; }
+
+    .faq-accordion .accordion-item + .accordion-item{ margin-top: 10px; }
+
+
+
+    /*Inner Service Page CSS*/
+    .svc-hero{ border-radius: 16px; padding: 18px !important; }
+    .svc-badge{ font-size: .75rem; padding: .45rem .8rem; }
+    .svc-subtext{ font-size: .9rem; }
+
+    .pah-figure{ max-width: 520px; }
+    .pah-card-right{ right:0; top:20%; }
+    .pah-card-bottom{ left:0; bottom:6%; }
+    .pah-card-float{ right:0; bottom:10%; }
+
+    .pah-card{ position:static; margin-top:.5rem; }
+
+    .pah-card, .pah-pill, .pah-float { position: static; margin-top:.5rem; }
+    .pah-wrap { max-width: 100%; }
+
+    .whychoose h2 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  
+    .whychoose .accordion {
+      margin-bottom: 2rem;
+    }
+  
+    .whychoose .img-fluid {
+      max-width: 100%;
+    }
+}
