@@ -88,11 +88,12 @@
       text-align: center;
     }
 
-    .find-job-section h2 {
+    .find-job-section-title {
       font-size: 1.6rem;
     }
   
-    .search-btn {
+    .find-job-search-btn {
       width: 100%;
+      max-width: 250px;
     }
 }

@@ -1,47 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import "leaflet/dist/leaflet.css";
-
 export default function NYMap() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return (
-      <section className="section-padding pt-0">
-        <div className="container">
-          <div className="rounded-4 shadow-sm overflow-hidden">
-            <div 
-              className="leaflet-placeholder" 
-              style={{ 
-                height: '400px', 
-                background: '#f8f9fa', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center' 
-              }}
-            >
-              <p className="text-muted">Loading map...</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="section-padding pt-0">
       <div className="container">
         <div className="rounded-4 shadow-sm overflow-hidden">
-          <div 
-            id="map" 
-            style={{ height: '400px', width: '100%' }}
-            className="leaflet"
-          />
+          <iframe
+            width="100%"
+            height="400"
+            frameBorder="0"
+            scrolling="no"
+            marginHeight={0}
+            marginWidth={0}
+            src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=175%20Pearl%20St,%20Brooklyn,%20NY%2011201,%20United%20States+(Rekuta)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </section>
