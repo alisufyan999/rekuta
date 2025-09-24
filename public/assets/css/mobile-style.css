@@ -77,4 +77,22 @@
     .whychoose .img-fluid {
       max-width: 100%;
     }
+
+    .job-banner-section h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .job-banner-section p,
+    .job-banner-section ul {
+      text-align: center;
+    }
+
+    .find-job-section h2 {
+      font-size: 1.6rem;
+    }
+  
+    .search-btn {
+      width: 100%;
+    }
 }

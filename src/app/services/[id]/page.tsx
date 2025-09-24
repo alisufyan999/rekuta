@@ -4,6 +4,18 @@ import ExpertiseSection from "@/components/ServiceDetails/ExpertiseSection";
 // import Organization from "@/components/ServiceDetails/Organization";
 import WhyChoose from "@/components/ServiceDetails/WhyChoose";
 import { servicesData } from "@/data/servicesData";
+import ServiceTestimonials from "@/components/ServiceDetails/ServiceTestimonials";
+import { Testimonial } from "@/components/ServiceDetails/ServiceTestimonials";
+import ServiceSalarySurvey from "@/components/ServiceDetails/ServiceSalarySurvey";
+import DynamicServiceCards from "@/components/ServiceDetails/DynamicServiceCards";
+import { dynamicserviceDetail } from "@/components/ServiceDetails/dynamicserviceDetail";
+import ContactSection from "@/components/Contact/ContactSection";
+import ServiceFAQs from "@/components/ServiceDetails/ServiceFAQs";
+import ServiceRekuta from "@/components/ServiceDetails/ServiceRekuta";
+
+
+
+
 
 type Props = { params: { id: string } };
 
@@ -54,6 +66,43 @@ export default function ServiceDetailPage({ params }: Props) {
           image={svc.whyChoose.image}
         />
       )}
+
+      {svc.testimonials && (
+        <ServiceTestimonials
+          row1Testimonials={svc.testimonials.row1}
+          row2Testimonials={svc.testimonials.row2}
+        />
+      )}
+
+      {svc.salarySurvey && (
+        <ServiceSalarySurvey
+          heading={svc.salarySurvey.heading}
+          subtext={svc.salarySurvey.subtext}
+          cta1={svc.salarySurvey.cta1}
+          cta2={svc.salarySurvey.cta2}
+          avatars={svc.salarySurvey.avatars}
+          label={svc.salarySurvey.label}
+          image={svc.salarySurvey.image}
+        />
+      )}
+
+
+{svc.dynamicserviceDetail && svc.dynamicserviceDetail.length >= 4 && (
+  <DynamicServiceCards serviceDetail={svc.dynamicserviceDetail} />
+)}
+
+<ContactSection/>
+
+{svc.faq && svc.faq.length > 0 && <ServiceFAQs faqs={svc.faq} />}
+
+{svc.servicerekuta && (
+  <ServiceRekuta serviceDetail={svc.servicerekuta} />
+)}
+
+
+
+
+
     </>
   );
 }

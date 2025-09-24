@@ -39,6 +39,36 @@ export type WhyChooseSection = {
   image: string;
 };
 
+export type Testimonial = {
+  id: number;
+  name: string;
+  position: string;
+  company: string;
+  quote: string;
+  tags: string[];
+};
+
+export type SalarySurvey = {
+  heading: string;
+  subtext: string;
+  cta1: string;
+  cta2: string;
+  avatars: string[];
+  label: string;
+  image: string;
+};
+
+export type dynamicserviceDetail = {
+  sectionTitle: string;
+  sectionText: string;
+}[];
+
+export type ServiceRekuta = {
+  sectionTitle: string;
+  sectionText: string;
+  image: string;
+};
+
 export type Service = {
   id: string;                 // URL slug: /services/[id]
   eyebrow: string;            // small badge text (hero)
@@ -52,11 +82,26 @@ export type Service = {
   };
   organizations?: Organizations; 
   whyChoose?: WhyChooseSection;// 👈 NEW
+
+  testimonials?: {
+    row1: Testimonial[];
+    row2: Testimonial[];
+  };
+
+  salarySurvey?: SalarySurvey;
+
+  dynamicserviceDetail?: dynamicserviceDetail;
+
+  faq?: { question: string; answer: string }[];
+
+  servicerekuta?: ServiceRekuta;
+
+
 };
 
 export const servicesData: Service[] = [
   {
-    id: "permanent-staffing",
+    id: "service-detail",
     eyebrow: "Permanent Staffing Services",
     title: "Future-Proof Your Team with Rekuta.ai",
     description:
@@ -199,7 +244,115 @@ export const servicesData: Service[] = [
         },
       ],
     },
-  },
+    
+    testimonials: {
+      row1: [
+        {
+          id: 1,
+          name: "Alice Johnson",
+          position: "Product Manager",
+          company: "Alpha Inc.",
+          quote: "The team at Rekuta is professional, efficient, and insightful.",
+          tags: ["Product", "Management"]
+        },
+        {
+          id: 2,
+          name: "Liam Brown",
+          position: "Director of Talent",
+          company: "Beta Corp",
+          quote: "We've consistently found the best people thanks to Rekuta.ai.",
+          tags: ["HR", "AI"]
+        },
+      ],
+      row2: [
+        {
+          id: 3,
+          name: "Sophia Davis",
+          position: "Recruiting Lead",
+          company: "Delta Group",
+          quote: "Effortless hiring with powerful results!",
+          tags: ["Hiring", "Tech"]
+        },
+        {
+          id: 4,
+          name: "Noah Wilson",
+          position: "Operations Head",
+          company: "Gamma Inc.",
+          quote: "We saved weeks of screening. Incredible.",
+          tags: ["Ops", "Efficiency"]
+        },
+      ]
+    },
+    
+    salarySurvey: {
+      heading: "Robert Walters 2025\nSalary Survey",
+      subtext: "Explore the salary and hiring trends in your industry.",
+      cta1: "Search For Jobs",
+      cta2: "Looking To Hire",
+      avatars: [
+        "/assets/images/about/about-person1.png",
+        "/assets/images/about/about-person1.png",
+        "/assets/images/about/about-person1.png",
+        "/assets/images/about/about-person1.png",
+      ],
+      label: "5K+ Active Members",
+      image: "/assets/images/about/about-side2.png",
+    },    
 
-  // Add more services here with their own blocks as needed
+    dynamicserviceDetail: [
+      {
+        sectionTitle: "Recruiting Across All Career Levels.",
+        sectionText:
+          "We take the time to listen to, and fully connect with, our clients and candidates. That's why we're the world's most trusted talent solutions business.",
+      },
+      {
+        sectionTitle: "Recruitment",
+        sectionText:
+          "Leverage our specialized industry expertise, and global reach to champion your story and connect you with the best professionals who will transform your business.",
+      },
+      {
+        sectionTitle: "Outsourcing",
+        sectionText:
+          "Leverage our specialized industry expertise, and global reach to champion your story and connect you with the best professionals who will transform your business.",
+      },
+      {
+        sectionTitle: "Talent Advisory",
+        sectionText:
+          "Experience agile recruitment outsourcing solutions tailored to your unique requirements, seamlessly scalable to match your evolving needs and objectives.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is permanent staffing?",
+        answer: "It refers to hiring employees for long-term roles in your organization.",
+      },
+      {
+        question: "How does Rekuta.ai ensure a good fit?",
+        answer: "We use AI and industry insight to ensure cultural and skill alignment.",
+      },
+      {
+        question: "Can you support international hiring?",
+        answer: "Yes, we have access to global talent pools for cross-border placements.",
+      },
+      {
+        question: "Is there a guarantee period?",
+        answer: "Yes, all placements come with a replacement guarantee within a certain period.",
+      },
+      {
+        question: "Do you offer volume hiring support?",
+        answer: "Yes, we support bulk hiring with dedicated recruiter teams.",
+      },
+    ],
+    
+    servicerekuta: {
+      sectionTitle: "Recruiting Across All Career Levels.",
+      sectionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      image: "/assets/images/about/about-side1.png"
+    },    
+    
+    
+  },
+  
+  
 ];

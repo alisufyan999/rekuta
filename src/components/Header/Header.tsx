@@ -11,19 +11,19 @@ const Header = () => {
   };
 
   const navItems = [
-    { href: '#', label: 'Jobs', isActive: true },
+    { href: '/job', label: 'Jobs', isActive: true },
     { href: '#', label: 'Candidates' },
-    { href: '#', label: 'Services' },
+    { href: 'services/service-detail', label: 'Services' },
     { href: '#', label: 'Insights' },
-    { href: 'about', label: 'About Us' },
-    { href: 'contact', label: 'Contact Us' },
+    { href: '/about', label: 'About Us' },
+    { href: '/contact', label: 'Contact Us' },
   ];
 
   return (
     <nav className="navbar navbar-expand-lg bg-white border-bottom py-2">
       <div className="container align-items-center">
         {/* Left: Logo */}
-        <Link className="navbar-brand fw-bold header-logo m-0" href="#">
+        <Link className="navbar-brand fw-bold header-logo m-0" href="/">
           LOGO
         </Link>
 
