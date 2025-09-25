@@ -8,7 +8,6 @@ import ServiceTestimonials from "@/components/ServiceDetails/ServiceTestimonials
 import { Testimonial } from "@/components/ServiceDetails/ServiceTestimonials";
 import ServiceSalarySurvey from "@/components/ServiceDetails/ServiceSalarySurvey";
 import DynamicServiceCards from "@/components/ServiceDetails/DynamicServiceCards";
-import { dynamicserviceDetail } from "@/components/ServiceDetails/dynamicserviceDetail";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceFAQs from "@/components/ServiceDetails/ServiceFAQs";
 import ServiceRekuta from "@/components/ServiceDetails/ServiceRekuta";
