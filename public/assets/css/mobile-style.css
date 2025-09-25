@@ -96,4 +96,9 @@
       width: 100%;
       max-width: 250px;
     }
+
+  .rk-hero { padding: 3rem 3rem; }
+  .rk-hero-title { margin-top: 2.6rem; }
+
+  .rk-profile-tablink { padding: .75rem .9rem; }
 }

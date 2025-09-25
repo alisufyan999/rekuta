@@ -843,13 +843,129 @@ section.whychoose {
 
 
 
+/* ===== Rekuta Banner (global, non-module) ===== */
+.rk-hero {
+  /* easy theming via CSS vars */
+  --rk-start: #1359dc;
+  --rk-mid:   #144fcd;
+  --rk-end:   #1246c0;
+
+  background: #1359dc;
+  padding: 5rem 0;
+  isolation: isolate; /* keep decorations behind text */
+  text-align: center;
+}
+
+/* badge chip */
+.rk-hero-chip {
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: rgba(255, 255, 255, .22);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* title + accent */
+.rk-hero-title {
+  margin: 1.5rem 0 0.5rem;
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  font-size: clamp(1.6rem, 4.6vw, 2.8rem);
+}
+.rk-hero-title-accent {
+  filter: brightness(112%);
+}
+
+/* subtitle */
+.rk-hero-subtitle {
+  max-width: 920px;
+  margin-inline: auto;
+  font-size: clamp(0.95rem, 1.6vw, 1rem);
+}
+
+
 
   
   
-  
-  
-  
- 
+/* ===== Profile (global) ===== */
+.rk-profile-section { }
+
+/* LEFT: tabs box */
+.rk-profile-tabs {
+  background: #0f51d6;
+  border-radius: 12px;
+}
+.rk-profile-tablink {
+  background: #1558df;
+  color: #fff;
+  border-radius: 10px;
+  padding: .85rem 1rem;
+}
+.rk-profile-tablink.active {
+  background: #fff;
+  color: #0f51d6;
+  box-shadow: 0 6px 18px rgba(15,81,214,.18);
+}
+.rk-profile-icon {
+  width: 20px; height: 20px; border-radius: 6px;
+  background: #fff;
+  display: inline-block;
+}
+.rk-profile-arrow {
+  font-size: 1.2rem; line-height: 1;
+}
+
+/* HEADINGS */
+.rk-profile-heading {
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.rk-profile-caption {
+  color: #7a7a7a;
+  font-size: .95rem;
+}
+
+/* FORMS */
+.rk-profile-input {
+  border-radius: 999px;
+  padding: .75rem 1rem;
+}
+.rk-profile-btn {
+  background: #1359dc;
+  color: #fff;
+  border-radius: 999px;
+  padding: .6rem 1.25rem;
+  box-shadow: 0 8px 22px rgba(19,89,220,.25);
+}
+.rk-profile-btn:hover { color:#fff; opacity:.95; }
+
+.rk-profile-sep {
+  opacity: .15;
+  margin: 1.25rem 0 1.5rem;
+}
+
+/* UPLOAD AREA */
+.rk-profile-upload {
+  border: 2px dashed #cfd6e4;
+  border-radius: 16px;
+  background: #fff;
+}
+.rk-profile-upload-icon {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: #e9f1ff;
+}
+.rk-profile-preview-img {
+  max-height: 260px; object-fit: contain;
+  border-radius: 8px;
+}
+.rk-profile-filebox {
+  display:inline-flex; flex-direction:column; align-items:center;
+}
+.rk-profile-filebox-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: #e9f1ff; margin-bottom:.5rem;
+}
+
   
   
   

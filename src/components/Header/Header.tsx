@@ -12,7 +12,7 @@ const Header = () => {
 
   const navItems = [
     { href: '/job', label: 'Jobs', isActive: true },
-    { href: '#', label: 'Candidates' },
+    { href: '/candidate', label: 'Candidate' },
     { href: 'services/service-detail', label: 'Services' },
     { href: '#', label: 'Insights' },
     { href: '/about', label: 'About Us' },
