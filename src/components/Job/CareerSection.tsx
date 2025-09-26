@@ -207,7 +207,7 @@ export default function CareerSection() {
   }, []);
 
   return (
-    <div className="career-section py-5">
+    <div className="career-section section-padding pt-0">
       <div className="container">
         <h1 className="career-title text-center mb-5">
           Ready for your next career move?

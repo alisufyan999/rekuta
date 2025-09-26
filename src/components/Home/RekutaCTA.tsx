@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 const RekutaCTA = () => {
     return (
-      <section className="rekuta-cta section-padding">
+      <section className="rekuta-cta section-padding pb-0">
         <div className="container position-relative">
           <div className="row align-items-center">
             {/* Left copy */}
-            <div className="col-lg-7">
+            <div className="col-lg-6">
               <h2 className="display-4 fw-bold text-white mb-3">
                 I'm Rekuta,<br />Are you?
               </h2>
@@ -22,74 +24,8 @@ const RekutaCTA = () => {
             </div>
   
             {/* Right visuals */}
-            <div className="col-lg-5 mt-5 mt-lg-0">
-              <div className="position-relative d-none d-sm-block" style={{ minHeight: '420px' }}>
-                {/* Job Vacancy stat */}
-                <div className="stat card shadow-lg border-0 rounded-4 p-3 position-absolute top-0 end-0 translate-middle-y">
-                  <div 
-                    className="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 border border-primary-subtle mb-2" 
-                    style={{ width: '44px', height: '44px' }}
-                  >
-                    🔍
-                  </div>
-                  <div className="fs-4 fw-bold text-dark mb-1">10.5K</div>
-                  <div className="small text-muted">Job Vacancy</div>
-                </div>
-  
-                {/* Job Interview card */}
-                <div 
-                  className="card shadow-lg border-0 rounded-4 p-3 position-absolute end-0" 
-                  style={{ top: '58%', width: '300px' }}
-                >
-                  <div className="d-flex align-items-start gap-2">
-                    <div 
-                      className="rounded-3 bg-primary bg-opacity-10 border border-primary-subtle d-flex align-items-center justify-content-center" 
-                      style={{ width: '38px', height: '38px' }}
-                    >
-                      📄
-                    </div>
-                    <div>
-                      <div className="fw-semibold">Job Interview Today</div>
-                      <div className="small text-muted">Today at 12.00 PM</div>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <span 
-                      className="d-inline-block bg-primary rounded-pill" 
-                      style={{ height: '8px', width: '48px' }}
-                    ></span>
-                  </div>
-                </div>
-  
-                {/* Congrats card */}
-                <div 
-                  className="card shadow-lg border-0 rounded-4 p-3 position-absolute start-50 translate-middle-x" 
-                  style={{ bottom: '0', width: '360px' }}
-                >
-                  <div className="d-flex align-items-center gap-3">
-                    <div 
-                      className="rounded-3 bg-primary text-white d-inline-flex align-items-center justify-content-center" 
-                      style={{ width: '46px', height: '46px' }}
-                    >
-                      🎉
-                    </div>
-                    <div>
-                      <div className="fw-semibold">Congratulations</div>
-                      <div className="small text-muted">You have been hired.</div>
-                    </div>
-                  </div>
-                </div>
-  
-                {/* Tiny floating dots (decor) */}
-                <span 
-                  className="float-dot position-absolute" 
-                  style={{ left: '-18px', top: '35%' }}
-                ></span>
-                <span 
-                  className="float-dot position-absolute" 
-                  style={{ right: '-18px', bottom: '8%' }}
-                ></span>
-              </div>
+            <div className="col-lg-6 text-center">
+              <Image src="/assets/images/job/banner.png" alt="Rekuta CTA" width={800} height={600} />
             </div>
           </div>
         </div>

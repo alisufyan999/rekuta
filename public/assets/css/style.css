@@ -860,9 +860,8 @@ section.whychoose {
 .rk-hero-chip {
   border-radius: 999px;
   padding: 0.45rem 0.75rem;
-  background: rgba(255, 255, 255, .22);
+  background: rgb(255 255 255 / 15%);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 /* title + accent */
@@ -907,12 +906,14 @@ section.whychoose {
   box-shadow: 0 6px 18px rgba(15,81,214,.18);
 }
 .rk-profile-icon {
-  width: 20px; height: 20px; border-radius: 6px;
+  width: 20px; 
+  height: 20px; 
+  border-radius: 6px;
   background: #fff;
   display: inline-block;
 }
 .rk-profile-arrow {
-  font-size: 1.2rem; line-height: 1;
+  font-size: 2rem;
 }
 
 /* HEADINGS */
@@ -937,7 +938,7 @@ section.whychoose {
   padding: .6rem 1.25rem;
   box-shadow: 0 8px 22px rgba(19,89,220,.25);
 }
-.rk-profile-btn:hover { color:#fff; opacity:.95; }
+.rk-profile-btn:hover { color:#000; opacity:.95; }
 
 .rk-profile-sep {
   opacity: .15;
@@ -965,19 +966,743 @@ section.whychoose {
   width: 40px; height: 40px; border-radius: 10px;
   background: #e9f1ff; margin-bottom:.5rem;
 }
+.profile-tab .nav-link{
+  box-shadow: none !important;
+  border-radius: 10px;
+  padding: .5rem;
+  color: #fff;
+  border: 1px solid #fff;
+  gap: .2rem 0;
+}
+.profile-tab .nav-link.active{
+  box-shadow: none !important;
+  border-radius: 10px;
+  padding: .5rem;
+  color: #000;
+  background: #fff;
+  border: 1px solid #fff;
+  gap: .2rem 0;
+}
 
   
   
+/* ===== Applications Tab (global) ===== */
+.rk-apps-title { font-weight: 800; letter-spacing: .2px; }
+.rk-apps-caption { color: #7a7a7a; font-size: .95rem; }
+
+.rk-apps-list { }
+
+.rk-apps-card {
+  background: #fff;
+  border: 1px solid #e9edf4;
+  box-shadow: 0 6px 18px rgba(6, 24, 44, .06);
+}
+
+.rk-apps-avatar {
+  width: 44px; height: 44px;
+  background: #eaf2ff;
+  color: #1a55d0;
+  min-width: 44px;
+}
+
+.rk-apps-job { font-size: 1rem; }
+.rk-apps-company { line-height: 1.1; }
+
+.rk-apps-status { margin-top: 2px; }
+.rk-apps-status--pending  { color: #d89614; }   /* orange */
+.rk-apps-status--rejected { color: #d64545; }   /* red */
+.rk-apps-status--accepted { color: #16a34a; }   /* green (future use) */
+
+.rk-apps-more {
+  background: #f5f6f9;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+.rk-apps-clear-btn {
+  background: #1359dc;
+  color: #fff;
+  border-radius: 999px;
+  padding: .65rem 1.25rem;
+  box-shadow: 0 10px 24px rgba(19, 89, 220, .25);
+}
+.rk-apps-clear-btn:disabled { opacity: .6; }
   
   
+/* ============================
+   Consulting Career (job-*)
+   ============================ */
+   .job-career-section { position: relative; }
+   
+   /* Typography */
+   .job-title {
+     font-weight: 800;
+     line-height: 1.2;
+     letter-spacing: .1px;
+     font-size: clamp(1.75rem, 3.5vw, 3rem);
+     color: #0b0b0b;
+   }
+   .job-lead {
+     color: #6c757d;
+     max-width: 46ch;
+   }
+   
+   /* Bullets */
+   .job-list { color: #222; font-size: 1rem; }
+   .job-check {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 22px;
+     height: 22px;
+     border-radius: 50%;
+     font-size: .8rem;
+     background: #e8f0ff;
+     color: #1458df;
+     margin-top: .2rem;
+   }
+   
+   /* CTA */
+   .job-cta {
+     background: #1458df;
+     color: #fff;
+     border-radius: 999px;
+     padding: .7rem 1.5rem;
+     font-weight: 600;
+     box-shadow: 0 10px 26px rgba(20, 88, 223, .28);
+   }
+   .job-cta:hover { color:#fff; opacity:.95; }
+
+
+
+   /* ============ Jobs – Two Ways Section ============ */
+.job-ways-title{
+  font-weight:800;
+  line-height:1.15;
+  letter-spacing:.2px;
+  font-size:clamp(1.8rem,4.2vw,3.1rem);
+  color:#0c0c0c;
+}
+.job-ways-subtitle{
+  color:#7b7b7b;
+  font-size:.98rem;
+}
+
+.job-card--light{
+  background:#e1e1e1;           /* soft grey like mock */
+  color:#101010;
+}
+.job-card--brand{
+  background:#1257dd;           /* brand blue */
+  color:#ffffff;
+  border-color:transparent;
+}
+
+.job-card-title{
+  font-weight:800;
+  letter-spacing:.2px;
+  line-height:1.2;
+  font-size:clamp(1.25rem,2.6vw,2rem);
+}
+.job-card-title--onbrand{ color:#fff; }
+
+.job-card-text{ color:#3b3b3b; max-width:60ch; }
+.job-card-text--onbrand{ color:#e7edff; }
+
+/* CTA buttons */
+.job-btn{
+  background:#1359dc;
+  color:#fff;
+  border-radius:999px;
+  padding:.6rem 1.2rem;
+  font-weight:600;
+  box-shadow:0 10px 22px rgba(19, 89, 220, .25);
+}
+.job-btn:hover{ color:#fff; opacity:.95; }
+.job-btn--light{
+  background:#ffffff;
+  color:#1359dc;
+  box-shadow:none;
+}
+
+/* Bottom-right icons */
+.job-card-icon{
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  color:#0d3fa9;
+  opacity:.9;
+}
+.job-card-icon--onbrand{
+  color:#cfe0ff;
+}
+
+
+
+
+
+/* ==============================
+   Job Listing (joblisting-*)
+   ============================== */
+   .joblisting-section {}
+
+   .joblisting-search .joblisting-input .input-group-text{
+     background:#fff;
+     border-right:0;
+   }
+   .joblisting-search .joblisting-input .form-control{
+     border-left:0;
+     border-radius:999px;
+   }
+   .joblisting-search .joblisting-input{
+     border-radius:999px;
+     overflow:hidden;
+     border:1px solid #e6ebf5;
+     background:#fff;
+   }
+   
+   .joblisting-btn{
+     background:#1b57e0;
+     color:#fff;
+     border-radius:999px;
+     padding:.65rem 1rem;
+     font-weight:600;
+     box-shadow:0 10px 22px rgba(27,87,224,.25);
+   }
+   .joblisting-btn:hover{ color:#fff; opacity:.95; }
+   
+   /* filter pills */
+   .joblisting-pill{
+     width:auto;
+     padding:.5rem .9rem;
+     border-radius:999px;
+     border:1px solid #e6ebf5;
+     background:#f8f9fc;
+   }
+   
+   /* cards */
+   .joblisting-card{
+     background:#fff;                 /* default white */
+     border:1px solid #e8edf6;
+     box-shadow:0 10px 26px rgba(10,22,70,.06);
+     transition:all .2s ease;
+   }
+   
+   /* badge */
+   .joblisting-badge{
+     background:#0d5ae5;
+     color:#fff;
+     border-radius:999px;
+     padding:.45rem .75rem;
+     font-weight:600;
+     font-size:.8rem;
+   }
+   
+   /* save icon */
+   .joblisting-save{
+     background:#f3f6ff;
+     border-radius:50%;
+     width:34px;height:34px;line-height:1;
+   }
+   
+   /* text styles */
+   .joblisting-title{ color:#182033; font-weight:700; }
+   .joblisting-sub{ color:#6b7280; }
+   .joblisting-meta{
+     display:grid;
+     grid-template-columns: repeat(2, minmax(0,1fr));
+     gap:.5rem 1rem;
+     color:#2b3a55;
+     font-size:.95rem;
+   }
+   
+   /* more details button */
+   .joblisting-more{
+     background:#0d5ae5;
+     color:#fff;
+     border-radius:999px;
+     padding:.5rem 1rem;
+     font-weight:600;
+   }
+   .joblisting-more:hover{ color:#fff; opacity:.95; }
+   
+   /* hover state: make the card look like the blue spotlight card */
+   .joblisting-card:hover{
+     background:#0d5ae5;             /* blue */
+     border-color:#0d5ae5;
+     box-shadow:0 14px 32px rgba(13,90,229,.35);
+   }
+   .joblisting-card:hover .joblisting-title,
+   .joblisting-card:hover .joblisting-sub,
+   .joblisting-card:hover .joblisting-meta,
+   .joblisting-card:hover .joblisting-meta li{
+     color:#fff !important;
+   }
+   .joblisting-card:hover .joblisting-badge{
+     background:#fff; color:#0d5ae5;
+   }
+   .joblisting-card:hover .joblisting-more{
+     background:#fff; color:#0d5ae5;
+   }
+   .joblisting-card:hover .joblisting-save{
+     background:#2e6df0; color:#fff;
+   }
+   
+   
+/* ==============================
+   Job Description Banner
+   ============================== */
+   .jobdescription-card{
+    background:#1558df;              /* brand blue */
+    color:#fff;
+    box-shadow:0 14px 36px rgba(13, 90, 229, .25);
+  }
+  
+  /* top-right save button */
+  .jobdescription-save{
+    width:38px;height:38px;
+    border-radius:50%;
+    background:#ffffff;
+    color:#1558df;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:1rem;
+  }
+  
+  /* badge "Full Time" */
+  .jobdescription-type{
+    background:#ffffff;
+    color:#333;
+    border-radius:999px;
+    padding:.45rem .8rem;
+    font-weight:600;
+    font-size:.8rem;
+  }
+  
+  /* title & sub */
+  .jobdescription-title{
+    font-weight:700;
+    letter-spacing:.2px;
+    line-height:1.2;
+  }
+  .jobdescription-sub{
+    opacity:.9;
+  }
+  
+  /* Apply button */
+  .jobdescription-apply{
+    background:#ffffff;
+    color:#1558df;
+    border-radius:999px;
+    padding:.5rem 1rem;
+    font-weight:600;
+    border: 1px solid #ffffff;
+  }
+  .jobdescription-apply:hover{ 
+    color: #fff;
+    background: transparent;
+    border: 1px solid #ffffff;
+  }
+  
+  /* meta list (two columns on desktop) */
+  .jobdescription-card .jobdescription-meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);           /* mobile: single column */
+    gap: .6rem 1.5rem;
+    text-align: left;
+  }
+  
+  .jobdescription-card .jobdescription-meta > li {
+    display: block;                        /* ensure each li occupies its grid cell */
+  }
+  
+  
+
+
+  /* ============================
+   Job Description (global)
+   ============================ */
+.jobdescription-title{
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.jobdescription-intro{ max-width: 70ch; }
+
+.jobdescription-subtitle{
+  font-weight:800;
+}
+
+/* Bulleted lists */
+.jobdescription-list{
+  margin:0; padding-left:1.2rem;
+}
+.jobdescription-list li{
+  margin-bottom:.5rem;
+}
+
+/* Action row */
+.jobdescription-apply{
+  background:#1558df;
+  color:#fff;
+  border-radius:999px;
+  padding:.6rem 1.2rem;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(21,88,223,.25);
+}
+.jobdescription-apply:hover{ color:#fff; opacity:.95; }
+
+.jobdescription-share{
+  background:#f4f6ff;
+  color:#1558df;
+  width:36px;height:36px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.jobdescription-share:hover{ background:#e8edff; color:#0f4edc; }
+
+/* Sidebar */
+.jobdescription-aside-title{
+  font-weight:800;
+}
+
+/* Similar role card */
+.jobdescription-rolecard{
+  background:#fff;
+  border:1px solid #e8edf6;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(10,22,70,.06);
+  transition: all .2s ease;
+}
+.jobdescription-rolecard:hover{
+  background:#1558df;
+  border-color:#1558df;
+  box-shadow:0 16px 36px rgba(21,88,223,.35);
+}
+.jobdescription-rolecard:hover,
+.jobdescription-rolecard:hover .jobdescription-role-title,
+.jobdescription-rolecard:hover .jobdescription-rolemeta li,
+.jobdescription-rolecard:hover .small{
+  color:#fff !important;
+}
+
+.jobdescription-role-title{
+  font-weight:700;
+  color:#182033;
+}
+
+.jobdescription-rolemeta{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:.5rem 1rem;
+  color:#2b3a55;
+  font-size:.95rem;
+}
+@media (max-width: 575.98px){
+  .jobdescription-rolemeta{ grid-template-columns: 1fr; }
+}
+
+/* badge + save */
+.jobdescription-badge{
+  background:#0d5ae5;
+  color:#fff;
+  border-radius:999px;
+  padding:.4rem .75rem;
+  font-weight:600;
+  font-size:.8rem;
+}
+.jobdescription-save{
+  background:#f3f6ff;
+  color:#0d5ae5;
+  width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* CTA on cards */
+.jobdescription-more{
+  background:#0d5ae5;
+  color:#fff;
+  border-radius:999px;
+  padding:.45rem 1rem;
+  font-weight:600;
+}
+.jobdescription-rolecard:hover .jobdescription-more{
+  background:#fff; color:#1558df;
+}
+
+.jobdescription-box{
+  border-bottom: 1px solid #cbcbcb;
+}
+
+
+
+/* ==============================
+   Job Application Banner (.jobapplication-*)
+   ============================== */
+   .jobapplication-card{
+    background:#1558df;                 /* blue like design */
+    color:#fff;
+    box-shadow:0 14px 36px rgba(13,90,229,.25);
+  }
+  
+  /* bookmark */
+  .jobapplication-save{
+    width:40px;height:40px;border-radius:50%;
+    background:#fff;color:#1558df;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1rem;
+  }
+  
+  /* left column content */
+  .jobapplication-badge{
+    background:#fff;color:#333;
+    border-radius:999px;
+    padding:.45rem .9rem;
+    font-weight:600;font-size:.8rem;
+  }
+  .jobapplication-title{
+    font-weight:700; letter-spacing:.2px; line-height:1.2;
+  }
+  .jobapplication-sub{ opacity:.95; }
+  
+  /* CTA */
+  .jobapplication-cta{
+    background:#fff;
+    color:#1558df;
+    border-radius:999px;
+    padding:.5rem 1rem;
+    font-weight:600;
+    border: 1px solid #fff;
+  }
+  .jobapplication-cta:hover{ 
+    color: #fff; 
+    background: transparent;
+    border: 1px solid #fff;
+   }
+  
+  /* right column meta list */
+  .jobapplication-meta{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);          /* mobile: single column */
+    gap:.8rem 1.5rem;
+    font-weight:500;
+    text-align: left;
+  }
+  .jobapplication-meta li{ list-style:none; }
+
+
+
+  /* ============================
+   Job Application (jobapplication-*)
+   ============================ */
+.jobapplication-heading{ font-weight:800; }
+
+.jobapplication-panel{
+  background:#fff;
+  border:1px solid #e8edf6;
+  box-shadow:0 8px 24px rgba(10,22,70,.06);
+}
+
+/* inputs */
+.jobapplication-label{ font-weight:600; }
+.jobapplication-input,
+.jobapplication-textarea{
+  background:#f9fafc;
+  border: 1px solid #e6e9f2;
+  border-radius: 30px;
+  padding: .8rem 1rem;
+}
+
+/* upload */
+.jobapplication-upload{
+  border:1px dashed #cdd6ec;
+  border-radius:12px;
+  background:#f7f9ff;
+}
+.jobapplication-upload-icon{
+  font-size:1.4rem;
+  color:#1558df;
+}
+.jobapplication-btn{
+  background:#1558df;
+  color:#fff;
+  border-radius:999px;
+  padding:.5rem 1rem;
+  font-weight:600;
+}
+.jobapplication-preview-img{
+  max-height:160px;
+  border-radius:8px;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+.jobapplication-file{ color:#334155; }
+
+/* submit */
+.jobapplication-submit{
+  background:#1558df;
+  color:#fff;
+  border-radius:999px;
+  padding:.7rem 1rem;
+  font-weight:700;
+}
+
+/* right column */
+.jobapplication-role{ font-weight:800; }
+.jobapplication-subtitle{ font-weight:800; }
+.jobapplication-box{
+  border-bottom: 1px solid #cbcbcb;
+}
+.jobapplication-points{ list-style:none; padding-left:0; }
+.jobapplication-points li{ margin:.35rem 0; color:#27324a; }
+
+/* ============================
+   Job Application Social Icons
+   ============================ */
+   .jobapplication-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3f6ff;
+    color: #1558df;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .jobapplication-social-icon:hover {
+    background: #1558df;
+    color: #fff;
+  }
+
+
+
+
+  /* ============================
+   Login Main (.loginmain-*)
+   ============================ */
+.loginmain-title{ font-weight:800; letter-spacing:.2px; }
+
+/* Left panel */
+.loginmain-left{
+  background: linear-gradient(180deg,#1b5de6 0%, #164dcc 100%);
+  color:#fff;
+  overflow:hidden;
+  box-shadow: 0 16px 40px rgba(17, 61, 201, .25);
+}
+.loginmain-quote{
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #fff;
+}
+
+/* arcs */
+.loginmain-arc-1,
+.loginmain-arc-2,
+.loginmain-arc-3{
+  position:absolute; border-radius:999px; pointer-events:none;
+  mix-blend-mode: soft-light;
+}
+.loginmain-arc-1{ width:520px;height:520px; right:-140px; bottom:-140px; background:radial-gradient(closest-side, rgba(255,255,255,.18), transparent 70%); }
+.loginmain-arc-2{ width:420px;height:420px; right:-90px; bottom:-120px; background:radial-gradient(closest-side, rgba(255,255,255,.12), transparent 70%); }
+.loginmain-arc-3{ width:320px;height:320px; right:-40px; bottom:-100px; background:radial-gradient(closest-side, rgba(255,255,255,.08), transparent 70%); }
+
+/* Right card */
+.loginmain-right{
+  background:#f3f6fb;
+  border: 2px solid #d8e1f5;
+  box-shadow: 0 10px 30px rgba(10,22,70,.06);
+}
+
+/* account options */
+.loginmain-option{
+  background:#ffffff;
+  border:2px solid #e4ebf9;
+  transition: .2s ease;
+  text-decoration: none;
+}
+.loginmain-option:hover{ border-color:#1b5de6; box-shadow:0 8px 22px rgba(27,93,230,.15); }
+.loginmain-option.is-active{ border-color:#1b5de6; }
+
+
+/* Next button */
+.loginmain-next{
+  background:#1b5de6;
+  color:#fff;
+  border-radius: 999px;
+  padding:.6rem 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 12px 26px rgba(27,93,230,.25);
+}
+.loginmain-next:hover{ color:#fff; opacity:.95; }
+
+
+
+
+/* Overlay host */
+.loginmain-right { position: relative; }
+
+/* Hidden by default */
+.loginmain-formwrap{
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(243, 246, 251, 0.65); /* soft veil */
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+.loginmain-formwrap.show{ display: flex; }
+
+/* Card */
+.loginmain-formcard{
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #e6ebf5;
+  box-shadow: 0 16px 40px rgba(10,22,70,.12);
+}
+
+/* Inputs / buttons to match screenshot */
+.loginmain-input{
+  border-radius: 999px;
+  background: #f2f4f8;
+  border: 1px solid #e6e9f2;
+  height: 44px;
+  padding: .5rem 1rem;
+}
+
+.loginmain-login{
+  background: #1b5de6;
+  color: #fff;
+  border-radius: 999px;
+  padding: .6rem 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(27, 93, 230, .26);
+}
+.loginmain-login:hover{ color:#fff; opacity:.95; }
+
+.loginmain-google{
+  background: #fff;
+  border: 1px solid #e6ebf5;
+  border-radius: 999px;
+  padding: .55rem 1rem;
+}
+
+/* (the rest of your previous .loginmain-* styles can remain) */
 
   
 
   
   
-  
-  
-  
+
+   
+   
 
   
   

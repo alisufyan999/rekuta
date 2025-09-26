@@ -101,4 +101,30 @@
   .rk-hero-title { margin-top: 2.6rem; }
 
   .rk-profile-tablink { padding: .75rem .9rem; }
+
+  .job-hero-img-wrap { max-width: 520px; }
+
+  .job-hero-img-wrap { max-width: 100%; }
+     .job-lead { font-size: .975rem; }
+
+     .job-card{ padding:1.25rem !important; }
+  .job-card-icon{ right:12px; bottom:12px; }
+
+  .joblisting-meta{ grid-template-columns: 1fr; }
+
+  .jobdescription-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jobdescription-card{ border-radius:1rem; }
+
+  .jobdescription-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jobapplication-meta{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+  .jobapplication-preview-img{ max-height:200px; width:100%; object-fit:contain; }
 }
