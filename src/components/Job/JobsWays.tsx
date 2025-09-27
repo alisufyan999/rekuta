@@ -11,8 +11,7 @@ const JobsWays: React.FC = () => {
             {/* Heading */}
             <div className="text-center mb-4 mb-lg-5">
                 <h2 className="job-ways-title mb-2">
-                Thousands of jobs. Two<br className="d-none d-md-inline" />
-                easy ways to find them
+                Thousands of jobs. Two easy ways to find them
                 </h2>
                 <p className="job-ways-subtitle mb-0">Technology and experience on your side</p>
             </div>

@@ -3,7 +3,7 @@ import AiRecruitHero from "@/components/About/AiRecruitHero";
 import AboutTiles from "@/components/About/AboutTiles";
 import SalarySurveyBanner from "@/components/About/SalarySurveyBanner";
 import Testimonials from "@/components/Home/Testimonials";
-import BlogInsights from "@/components/Home/BlogInsights";
+import BlogSlider from "@/components/Blog/BlogSlider";
 import RekutaCTA from "@/components/Home/RekutaCTA";
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
       <AboutTiles />
       <SalarySurveyBanner />
       <Testimonials />
-      <BlogInsights />
+      <BlogSlider />
       <RekutaCTA />
     </>
   );

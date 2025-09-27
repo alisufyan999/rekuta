@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "VisualSans";
+  src: url("/assets/fonts/Sans/Sans.woff2") format("woff2"),
+       url("/assets/fonts/Sans/Sans.woff") format("woff"),
+       url("/assets/fonts/Sans/Sans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Brand blue from the mock */
 :root { 
 	--brand-blue: #0e4dc7; 
@@ -28,6 +38,14 @@
 	overflow-x: hidden;
  }
 
+ body, p, button, a, ul, li, ol, span, strong{
+  font-family: var(--font-inter), sans-serif;
+ }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "VisualSans", sans-serif;
+}
+
  /* Header Styles */
  .header-logo{
 	color: var(--brand-blue) !important;
@@ -38,7 +56,7 @@
  /* Nav links */
  .header-link{
 	color:#111 !important;
-	font-weight: 500;
+	font-weight: 400;
 	padding:.5rem .25rem !important;
  }
 
@@ -58,12 +76,15 @@
 
  /* Account radio-like icon */
  .account-circle{
-	width:36px; height:36px;
-	border:3px solid var(--brand-blue);
-	border-radius:50%;
-	display:inline-flex;
-	align-items:center; justify-content:center;
-	position: relative;
+	border: 2px solid var(--brand-blue);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    position: relative;
+    padding: 6px;
  }
  .account-circle::after{
 	content:"";
@@ -85,7 +106,9 @@
  .hero-wrap{ background:#e1edff; border-radius:1.25rem; } /* big rounded wrapper */
  .left-card{ background:var(--brand); color:#fff; border-radius:1.5rem; }
  .left-card .badge{ background:#2a6cff !important; }
- .left-card .display-5{ font-weight:800; line-height:1.1; }
+ .left-card .display-5{ 
+  font-weight:500; 
+  line-height:1.1; }
  .btn-pill{ border-radius:2rem; padding:.6rem 1.1rem; }
  .search-card{ border-radius:1.25rem; box-shadow:0 10px 30px rgba(0,0,0,.08); }
  .rail{ background:#f5f7fb; padding:.35rem; border-radius:2rem; box-shadow:inset 0 3px 14px rgba(0,0,0,.06);}
@@ -130,7 +153,7 @@
  .step-dot { width:10px;height:10px;background:#000;border-radius:50%;display:block;margin:10px auto 0; }
  .step-circle { width:110px;height:110px;border-radius:50%;background:var(--brand);margin:0 auto; }
  .step-card { background:#f6f9ff;border:1px solid #e5ebf6;border-radius:14px; }
- .step-kicker { color:#1f66ff; letter-spacing:.06em; font-weight:700; }
+ .step-kicker { color:#1f66ff; letter-spacing:.06em; font-weight: 500; }
 
  /* Areas Section Styles */
  .areas-section {
@@ -307,7 +330,7 @@
   width: 28px; height: 28px; border-radius: 50%;
   background:#e6f4ea; color:#1f7a4c;
   display:inline-flex; align-items:center; justify-content:center;
-  font-size: 12px; font-weight:700;
+  font-size: 12px; font-weight: 500;
 }
 .ai-bubble{
   width: 28px; height: 28px; border-radius: 50%;
@@ -365,7 +388,7 @@
     position:absolute;
     width:40px; height:40px; border-radius:50%;
     align-items:center; justify-content:center;
-    background:#fff; color:#0e4fb8; font-weight:700;
+    background:#fff; color:#0e4fb8; font-weight: 500;
     box-shadow: 0 6px 16px rgba(0,0,0,.12);
   }
   .rw-fab-1{ left:16%; top:16%; }
@@ -634,7 +657,6 @@ section.whychoose {
   background: linear-gradient(135deg, #0d6efd, #2563eb);
   color: #fff;
   padding: 4rem 0;
-  border-radius: 12px;
   position: relative;
   overflow: hidden;
 }
@@ -723,7 +745,7 @@ section.whychoose {
 
 .career-title {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .career-tabs {
@@ -918,7 +940,7 @@ section.whychoose {
 
 /* HEADINGS */
 .rk-profile-heading {
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: .2px;
 }
 .rk-profile-caption {
@@ -987,10 +1009,14 @@ section.whychoose {
   
   
 /* ===== Applications Tab (global) ===== */
-.rk-apps-title { font-weight: 800; letter-spacing: .2px; }
-.rk-apps-caption { color: #7a7a7a; font-size: .95rem; }
-
-.rk-apps-list { }
+.rk-apps-title { 
+  font-weight: 500; 
+  letter-spacing: .2px; 
+}
+.rk-apps-caption { 
+  color: #7a7a7a; 
+  font-size: .95rem; 
+}
 
 .rk-apps-card {
   background: #fff;
@@ -1036,7 +1062,7 @@ section.whychoose {
    
    /* Typography */
    .job-title {
-     font-weight: 800;
+     font-weight: 500;
      line-height: 1.2;
      letter-spacing: .1px;
      font-size: clamp(1.75rem, 3.5vw, 3rem);
@@ -1077,7 +1103,7 @@ section.whychoose {
 
    /* ============ Jobs – Two Ways Section ============ */
 .job-ways-title{
-  font-weight:800;
+  font-weight:500;
   line-height:1.15;
   letter-spacing:.2px;
   font-size:clamp(1.8rem,4.2vw,3.1rem);
@@ -1099,7 +1125,7 @@ section.whychoose {
 }
 
 .job-card-title{
-  font-weight:800;
+  font-weight:500;
   letter-spacing:.2px;
   line-height:1.2;
   font-size:clamp(1.25rem,2.6vw,2rem);
@@ -1206,7 +1232,7 @@ section.whychoose {
    }
    
    /* text styles */
-   .joblisting-title{ color:#182033; font-weight:700; }
+   .joblisting-title{ color:#182033; font-weight: 500; }
    .joblisting-sub{ color:#6b7280; }
    .joblisting-meta{
      display:grid;
@@ -1280,7 +1306,7 @@ section.whychoose {
   
   /* title & sub */
   .jobdescription-title{
-    font-weight:700;
+    font-weight: 500;
     letter-spacing:.2px;
     line-height:1.2;
   }
@@ -1325,13 +1351,13 @@ section.whychoose {
    Job Description (global)
    ============================ */
 .jobdescription-title{
-  font-weight:800;
+  font-weight: 500;
   letter-spacing:.2px;
 }
 .jobdescription-intro{ max-width: 70ch; }
 
 .jobdescription-subtitle{
-  font-weight:800;
+  font-weight: 500;
 }
 
 /* Bulleted lists */
@@ -1363,7 +1389,7 @@ section.whychoose {
 
 /* Sidebar */
 .jobdescription-aside-title{
-  font-weight:800;
+  font-weight: 500;
 }
 
 /* Similar role card */
@@ -1387,7 +1413,7 @@ section.whychoose {
 }
 
 .jobdescription-role-title{
-  font-weight:700;
+  font-weight: 500;
   color:#182033;
 }
 
@@ -1461,7 +1487,9 @@ section.whychoose {
     font-weight:600;font-size:.8rem;
   }
   .jobapplication-title{
-    font-weight:700; letter-spacing:.2px; line-height:1.2;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height:1.2;
   }
   .jobapplication-sub{ opacity:.95; }
   
@@ -1495,7 +1523,9 @@ section.whychoose {
   /* ============================
    Job Application (jobapplication-*)
    ============================ */
-.jobapplication-heading{ font-weight:800; }
+.jobapplication-heading{ 
+  font-weight: 500; 
+}
 
 .jobapplication-panel{
   background:#fff;
@@ -1543,12 +1573,12 @@ section.whychoose {
   color:#fff;
   border-radius:999px;
   padding:.7rem 1rem;
-  font-weight:700;
+  font-weight: 500;
 }
 
 /* right column */
-.jobapplication-role{ font-weight:800; }
-.jobapplication-subtitle{ font-weight:800; }
+.jobapplication-role{ font-weight: 500; }
+.jobapplication-subtitle{ font-weight: 500; }
 .jobapplication-box{
   border-bottom: 1px solid #cbcbcb;
 }
@@ -1583,7 +1613,10 @@ section.whychoose {
   /* ============================
    Login Main (.loginmain-*)
    ============================ */
-.loginmain-title{ font-weight:800; letter-spacing:.2px; }
+.loginmain-title{ 
+  font-weight:500; 
+  font-size: 2.5rem;
+}
 
 /* Left panel */
 .loginmain-left{
@@ -1694,15 +1727,136 @@ section.whychoose {
   padding: .55rem 1rem;
 }
 
-/* (the rest of your previous .loginmain-* styles can remain) */
 
-  
 
-  
-  
+/* ===== Blog Main Banner ===== */
+.blogmain-hero{
+  background:#1b5de6; /* normal blue */
+  color:#fff;
+}
 
-   
-   
+.blogmain-badge{
+  color: #fff;
+  background: rgba(255, 255, 255, .22) !important;
+  border-radius: 30px;
+  padding: .35rem .8rem;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.blogmain-title{
+  font-weight:500;
+  letter-spacing:.2px;
+  line-height:1.2;
+}
+
+.blogmain-sub{
+  max-width:860px;
+  color:#e6ecff;
+}
+
+/* Search */
+.blogmain-search{ max-width:640px; }
+.blogmain-input{
+  background:#fff;
+  border:none;
+  height:48px;
+  padding:.6rem 1rem;
+  border-radius:999px 0 0 999px;
+}
+.blogmain-input:focus{ box-shadow:none; }
+
+.blogmain-btn{
+  background:#0f4fe0;
+  color:#fff;
+  border-radius:0 999px 999px 0;
+  padding:.6rem 1.1rem;
+  font-weight:600;
+  box-shadow:0 10px 22px rgba(15,79,224,.25);
+}
+.blogmain-btn:hover{ color:#fff; opacity:.95; }
+
+/* Arcs */
+.blogmain-arc{
+  position:absolute;
+  inset:auto;
+  pointer-events:none;
+  border-radius:999px;
+  mix-blend-mode:soft-light;
+}
+.blogmain-arc-1{ right:-140px; top:-160px; width:560px; height:560px; background:radial-gradient(closest-side, rgba(255,255,255,.18), transparent 70%); }
+.blogmain-arc-2{ right:-70px;  top:-120px; width:440px; height:440px; background:radial-gradient(closest-side, rgba(255,255,255,.12), transparent 70%); }
+.blogmain-arc-3{ right:-20px;  top:-80px;  width:320px; height:320px; background:radial-gradient(closest-side, rgba(255,255,255,.08), transparent 70%); }
+
+
+
+/* ============================
+   Blog Detail (.blogdetail-*)
+   ============================ */
+   .blogdetail-badge{
+    background:#e9f0ff;
+    color:#0f4fe0;
+    font-weight:600;
+    border-radius:999px;
+    padding:.35rem .7rem;
+    font-size:.75rem;
+  }
+  
+  .blogdetail-title{
+    font-weight: 500;
+    line-height:1.2;
+    border-bottom:1px solid #eef2fa;
+    padding-bottom:.75rem;
+    margin-bottom:.75rem;
+  }
+  
+  .blogdetail-left{ position: sticky; top: 96px; } /* adjust if header fixed */
+  
+  .blogdetail-card{
+    background:#fff;
+    border:1px solid #e7ecf6;
+    box-shadow:0 10px 28px rgba(10,22,70,.06);
+  }
+  
+  .blogdetail-toc li + li{ margin-top:.45rem; }
+  .blogdetail-toc a{
+    display:inline-flex; align-items:center;
+    color:#334155; text-decoration:none;
+    font-size:.95rem;
+  }
+  .blogdetail-toc a:hover{ color:#0f4fe0; }
+  
+  /* hero image */
+  .blogdetail-hero img{ 
+    object-fit:cover; 
+  }
+  
+  /* headings inside article */
+  .blogdetail-h2{ font-weight: 500; margin: .5rem 0 1rem; }
+  .blogdetail-h3{ font-weight: 500; margin: 1.5rem 0 .75rem; }
+  
+  /* checklists */
+  .blogdetail-checklist li{
+    color:#475569; padding:.25rem 0;
+  }
+  .blogdetail-checklist .fa-check-circle{ color:#0f4fe0; }
+  
+  /* share row */
+  .blogdetail-share{
+    background:#f5f7ff;
+    border:1px solid #e1e7fb;
+    box-shadow:0 8px 20px rgba(15,79,224,.08);
+    margin-top:1.5rem;
+  }
+  .blogdetail-social{
+    width:36px;height:36px;border-radius:50%;
+    background:#fff;color:#0f4fe0;
+    display:inline-flex;align-items:center;justify-content:center;
+    text-decoration:none;transition:.2s;
+    border:1px solid #e1e7fb;
+  }
+  .blogdetail-social:hover{ background:#0f4fe0;color:#fff; }
+  
 
   
   

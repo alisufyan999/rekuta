@@ -58,9 +58,8 @@ export default function ClientCentricStats() {
       <div className="container">
         <div ref={rootRef} className="stats-hero rounded-4 p-4 p-md-5 position-relative overflow-hidden">
           {/* Headline */}
-          <h2 className="text-white text-center fw-bold display-6 lh-sm mb-4 mb-md-5">
-            Tailoring Success With A<br className="d-none d-md-inline" />
-            Client-Centric Approach
+          <h2 className="text-white text-center display-5 lh-sm mb-4 mb-md-5">
+            Tailoring Success With A Client-Centric Approach
           </h2>
 
           {/* Counters */}

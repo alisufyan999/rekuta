@@ -78,7 +78,7 @@ interface Job {
         <div className="container">
           {/* Heading */}
           <div className="text-center mb-4">
-            <h1 className="display-4 fw-bold">Find a Job that Suits You</h1>
+            <h1 className="display-4">Find a Job that Suits You</h1>
             <p className="text-muted fs-5 mb-0">
               Find the perfect platform to help you land job opportunities that match your skills and career goals.
             </p>

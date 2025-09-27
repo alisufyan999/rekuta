@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +27,7 @@ const Header = () => {
     { href: '/job', label: 'Jobs', isActive: true },
     { href: '/candidate', label: 'Candidate' },
     { href: 'services/service-detail', label: 'Services' },
-    { href: '#', label: 'Insights' },
+    { href: '/blog', label: 'Insights' },
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact Us' },
   ];
@@ -76,8 +78,8 @@ const Header = () => {
           href="/login" 
           className="btn btn-link d-none d-lg-inline-flex align-items-center text-decoration-none header-account"
         >
-          <span className="account-circle me-2"></span>
-          <span className="fw-semibold text-dark">My Account</span>
+          <FontAwesomeIcon icon={faUser} className="account-circle me-2" />
+          <span className="text-dark">My Account</span>
         </Link>
       </div>
     </nav>

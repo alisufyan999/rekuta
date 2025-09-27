@@ -38,7 +38,7 @@ interface ProcessStep {
         <div className="container">
           {/* Heading */}
           <div className="text-center mb-4">
-            <h2 className="display-4 fw-bold">Our Process</h2>
+            <h2 className="display-4">Our Process</h2>
             <p className="text-muted fs-5 mb-0">
               We Source Your Offshore Talent In 3 Weeks or Less , Effortless Offshore Recruitment In Five Steps
             </p>
@@ -52,7 +52,7 @@ interface ProcessStep {
                 <span className="step-dot"></span>
                 <div className="p-4 step-card mt-3">
                   <div className="step-kicker mb-2">{step.stepNumber}</div>
-                  <h4 className="fw-bold">{step.title}</h4>
+                  <h4 className="">{step.title}</h4>
                   <p className="text-muted mb-0">
                     {step.description}
                   </p>

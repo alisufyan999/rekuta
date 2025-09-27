@@ -18,7 +18,7 @@ export default function ServiceFAQs({ faqs }: Props) {
   return (
     <section className="section-padding pt-0">
       <div className="container">
-        <h2 className="text-center fw-bold mb-4 mb-md-5">FAQs</h2>
+        <h2 className="text-center display-5 mb-4 mb-md-5">FAQs</h2>
         <div className="row g-3 g-md-4">
           {/* LEFT COLUMN */}
           <div className="col-12 col-lg-6">

@@ -7,7 +7,7 @@ export default function AiRecruitHero() {
           <div className="row align-items-center g-4 g-lg-5">
             {/* LEFT: copy */}
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold mb-3">Redefining<br/>Recruitment with AI</h1>
+              <h1 className="display-5 mb-3">Redefining<br/>Recruitment with AI</h1>
   
               <p className="text-secondary mb-3">
                 At rekuta.ai, we are on a mission to transform the hiring process

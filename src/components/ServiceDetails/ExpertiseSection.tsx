@@ -13,7 +13,7 @@ export default function ExpertiseSection({ heading, items }: Props) {
       style={{ background: "radial-gradient(120% 120% at 50% -10%, #1a56d6 0%, #0f43b7 40%, #0c3aa4 100%)" }}
     >
       <div className="container">
-        <h2 className="text-center text-white fw-bold mb-4 mb-md-5">
+        <h2 className="text-center text-white display-5 mb-4 mb-md-5">
           {heading}
         </h2>
 

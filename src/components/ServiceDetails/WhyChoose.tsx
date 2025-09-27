@@ -24,7 +24,7 @@ export default function WhyChoose({ heading, items, image }: Props) {
           {/* Left Column */}
           <div className="col-lg-6 mb-4 mb-lg-0">
             <h2
-              className="fw-bold mb-4"
+              className="`mb-4"
               dangerouslySetInnerHTML={{ __html: heading }}
             />
 

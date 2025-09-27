@@ -7,8 +7,8 @@ const RekutaCTA = () => {
           <div className="row align-items-center">
             {/* Left copy */}
             <div className="col-lg-6">
-              <h2 className="display-4 fw-bold text-white mb-3">
-                I'm Rekuta,<br />Are you?
+              <h2 className="display-5 text-white mb-3">
+                I'm Rekuta, Are you?
               </h2>
               <p className="lead text-white-50 mb-4">
                 Join us in redefining recruitment with the power of AI. At rekuta.at, we're not just connecting candidates

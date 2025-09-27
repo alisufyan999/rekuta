@@ -162,7 +162,7 @@ const Testimonials = () => {
     <section className="section-padding">
       <div className="row">
         <div className="col-lg-12">
-          <h2 className="display-4 fw-bold text-center mb-4">Our Testimonials</h2>
+          <h2 className="display-4 text-center mb-4">Our Testimonials</h2>
 
           {/* Slider LTR */}
           <div className="owl-carousel owl-theme mb-1" id="testiCarouselLTR">

@@ -23,9 +23,8 @@ export default function ContactSection() {
         <div className="row g-4 g-lg-5 align-items-start">
           {/* LEFT: copy + info tiles */}
           <div className="col-lg-6">
-            <h2 className="display-6 fw-bold lh-sm mb-3">
-              Why Reach Out to <br className="d-none d-md-block" />
-              Rekuta?
+            <h2 className="display-5 lh-sm mb-3">
+              Why Reach Out to Rekuta?
             </h2>
 
             <p className="text-secondary mb-4">
@@ -84,7 +83,7 @@ export default function ContactSection() {
           {/* RIGHT: form */}
           <div className="col-lg-6">
             <div className="contact-panel p-3 p-md-4 rounded-4 shadow-sm">
-              <h4 className="text-white fw-semibold mb-3">Get in Touch</h4>
+              <h4 className="text-white mb-3">Get in Touch</h4>
 
               <form onSubmit={handleSubmit} className="contact-form">
                 {/* Row 1: name + email */}

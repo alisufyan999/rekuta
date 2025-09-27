@@ -20,7 +20,7 @@ type Props = {
           <div className="row align-items-center g-4 g-lg-5">
             {/* Left copy */}
             <div className="col-lg-6">
-              <h2 className="display-6 fw-bold lh-sm mb-3">{title}</h2>
+              <h2 className="display-5 lh-sm mb-3">{title}</h2>
   
               {paragraphs.map((p, i) => (
                 <p key={i} className="text-secondary mb-3">

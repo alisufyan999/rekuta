@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Top lead + subscribe */}
         <div className="row align-items-end g-3 pb-4 mb-4 border-bottom border-secondary-subtle">
           <div className="col-lg-6">
-            <h3 className="text-white fw-bold mb-2">Streamlined Job Search For Success</h3>
+            <h3 className="text-white mb-2">Streamlined Job Search For Success</h3>
             <p className="text-white-50 mb-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo
               eiusmod tempor incididunt ut labore et dolore.
@@ -52,7 +52,7 @@ const Footer = () => {
         {/* Columns */}
         <div className="row g-4 mb-5">
           <div className="col-12 col-md-6 col-lg-3">
-            <h6 className="text-white fw-bold mb-3">Find Us</h6>
+            <h6 className="text-white mb-3">Find Us</h6>
             <ul className="list-unstyled small text-white-50 mb-3">
               <li className="mb-2">Mon - Sat : 8am - 9pm</li>
               <li className="mb-2">
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
 
           <div className="col-6 col-lg-3">
-            <h6 className="text-white fw-bold mb-3">Our Services</h6>
+            <h6 className="text-white mb-3">Our Services</h6>
             <ul className="list-unstyled small">
               <li className="mb-2">
                 <a className="link-footer" href="#">Talent Sourcing</a>
@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
 
           <div className="col-6 col-lg-3">
-            <h6 className="text-white fw-bold mb-3">Quick Links</h6>
+            <h6 className="text-white mb-3">Quick Links</h6>
             <ul className="list-unstyled small">
               <li className="mb-2">
                 <a className="link-footer" href="#">About Company</a>
@@ -140,7 +140,7 @@ const Footer = () => {
           </div>
 
           <div className="col-12 col-lg-3">
-            <h6 className="text-white fw-bold mb-3">Download Our App</h6>
+            <h6 className="text-white mb-3">Download Our App</h6>
             <p className="text-white-50 small mb-0">
               Download our App and get extra AI help to find a job that suits you. Hurry Up!!
             </p>
@@ -150,7 +150,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3 pt-3 border-top border-secondary-subtle">
           <div className="d-flex align-items-center gap-3">
-            <span className="text-white fw-bold fs-4">LOGO</span>
+            <span className="text-white fs-4">LOGO</span>
             <span className="text-white-50 small">Copyright © 2025 REKUTA. All rights reserved.</span>
           </div>
           <ul className="list-inline m-0 small">
@@ -171,6 +171,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 

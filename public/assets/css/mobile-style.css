@@ -127,4 +127,13 @@
   }
 
   .jobapplication-preview-img{ max-height:200px; width:100%; object-fit:contain; }
+
+  .blogmain-title{ font-size:1.6rem; }
+  .blogmain-input{ height:44px; }
+  .blogmain-btn{ padding:.5rem .9rem; }
+
+  .blogdetail-sticky{ position: static; }
+
+  .blogdetail-left{ position: static; }
+  .blogdetail-title{ border-bottom:0; }
 }

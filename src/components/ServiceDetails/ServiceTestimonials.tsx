@@ -103,7 +103,7 @@ const ServiceTestimonials = ({ row1Testimonials, row2Testimonials }: Props) => {
     <section className="section-padding">
       <div className="row">
         <div className="col-lg-12">
-          <h2 className="display-4 fw-bold text-center mb-4">What Our Clients Say</h2>
+          <h2 className="display-5 text-center mb-4">What Our Clients Say</h2>
 
           {/* Row 1 - LTR */}
           {row1Testimonials.length > 0 && (

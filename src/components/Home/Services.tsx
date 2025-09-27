@@ -5,7 +5,7 @@ const Services = () => {
           {/* Header / intro */}
           <div className="row g-4 align-items-start">
             <div className="col-lg-6">
-              <h2 className="display-4 fw-bold mb-3">
+              <h2 className="display-4 mb-3">
                 Recruiting Across All<br className="d-none d-md-block" /> Career Levels.
               </h2>
               <p className="lead text-muted mb-0">
@@ -16,7 +16,7 @@ const Services = () => {
   
             <div className="col-lg-6">
               <div className="card card-soft shadow-sm p-4 p-md-5">
-                <h3 className="h2 fw-bold mb-3">Recruitment</h3>
+                <h3 className="h2 mb-3">Recruitment</h3>
                 <p className="text-muted mb-4">
                   Leverage our specialized industry expertise, and global reach to
                   champion your story and connect you with the best professionals who
@@ -31,7 +31,7 @@ const Services = () => {
           <div className="row g-4 mt-2">
             <div className="col-lg-6">
               <div className="card card-soft shadow-sm p-4 p-md-5">
-                <h3 className="h2 fw-bold mb-3">Outsourcing</h3>
+                <h3 className="h2 mb-3">Outsourcing</h3>
                 <p className="text-muted mb-4">
                   Leverage our specialized industry expertise, and global reach to
                   champion your story and connect you with the best professionals who
@@ -43,7 +43,7 @@ const Services = () => {
   
             <div className="col-lg-6">
               <div className="card card-blue shadow-sm p-4 p-md-5">
-                <h3 className="h2 fw-bold mb-3">Talent Advisory</h3>
+                <h3 className="h2 mb-3">Talent Advisory</h3>
                 <p className="mb-4 opacity-75">
                   Experience agile recruitment outsourcing solutions tailored to your
                   unique requirements, seamlessly scalable to match your evolving needs

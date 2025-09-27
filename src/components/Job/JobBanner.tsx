@@ -12,7 +12,7 @@ const JobBanner = () => {
               Job Listing
             </span>
 
-            <h1 className="fw-bold display-5">Find a job that fits your future</h1>
+            <h1 className="display-5">Find a job that fits your future</h1>
 
             <p className="mt-3">
               At Rekuta.ai, we connect candidates with opportunities across

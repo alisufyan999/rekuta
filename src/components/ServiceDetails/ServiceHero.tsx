@@ -18,7 +18,7 @@ type Props = {
                 {eyebrow}
               </span>
   
-              <h1 className="fw-bold svc-title mb-3">{title}</h1>
+              <h1 className="svc-title mb-3">{title}</h1>
               <p className="svc-subtext mx-auto mb-0">{description}</p>
             </div>
           </div>

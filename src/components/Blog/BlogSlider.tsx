@@ -24,11 +24,11 @@ interface BlogPost {
   description: string;
 }
 
-const BlogInsights = () => {
+const BlogSlider = () => {
   const blogPosts: BlogPost[] = [
     {
       id: 1,
-      image: "https://fastly.picsum.photos/id/574/536/354.jpg?hmac=tR-H1BlNikxy4fV6npSM86lpUr0HdUGnNG7x1nKQ0nw",
+      image: "/assets/images/blog/blogcard1.png",
       day: "15",
       month: "January",
       category: "Development",
@@ -38,7 +38,7 @@ const BlogInsights = () => {
     },
     {
       id: 2,
-      image: "https://fastly.picsum.photos/id/574/536/354.jpg?hmac=tR-H1BlNikxy4fV6npSM86lpUr0HdUGnNG7x1nKQ0nw",
+      image: "/assets/images/blog/blogcard1.png",
       day: "15",
       month: "January",
       category: "Development",
@@ -48,7 +48,7 @@ const BlogInsights = () => {
     },
     {
       id: 3,
-      image: "https://fastly.picsum.photos/id/574/536/354.jpg?hmac=tR-H1BlNikxy4fV6npSM86lpUr0HdUGnNG7x1nKQ0nw",
+      image: "/assets/images/blog/blogcard1.png",
       day: "15",
       month: "January",
       category: "Development",
@@ -142,7 +142,7 @@ const BlogInsights = () => {
   return (
     <section className="section-padding bg-light">
       <div className="container">
-        <h2 className="display-5 fw-bold text-center mb-4">Talent insights</h2>
+        <h2 className="display-5 text-center mb-4">Talent insights</h2>
 
         {/* Owl Carousel */}
         <div id="insightsCarousel" className="owl-carousel owl-theme">
@@ -167,7 +167,7 @@ const BlogInsights = () => {
                   <a href="#" className="link-primary text-decoration-none">Share({post.shareCount})</a>
                 </div>
 
-                <h5 className="fw-semibold">{post.title}</h5>
+                <h5 className="">{post.title}</h5>
                 <p className="text-muted">
                   {post.description}
                 </p>
@@ -182,4 +182,4 @@ const BlogInsights = () => {
   );
 };
 
-export default BlogInsights;
+export default BlogSlider;

@@ -7,7 +7,7 @@ export default function Banner() {
             <div className="row align-items-center">
               {/* Left: Text + CTAs */}
               <div className="col-lg-7">
-                <h1 className="display-5 fw-bold mb-3">
+                <h1 className="display-5 mb-3">
                   Robert Walters 2025
                   <br />
                   Salary Survey

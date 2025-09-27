@@ -13,7 +13,7 @@ export default function SalarySurveyBanner() {
             <div className="row align-items-center g-4">
               {/* LEFT: text */}
               <div className="col-lg-6">
-                <h1 className="display-6 fw-bold text-white mb-2">
+                <h1 className="display-5 text-white mb-2">
                   Robert Walters 2025<br />Salary Survey
                 </h1>
                 <p className="text-white-50 mb-4">

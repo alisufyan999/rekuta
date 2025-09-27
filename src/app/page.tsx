@@ -5,7 +5,7 @@ import JobListing from "@/components/Home/JobListing";
 import Process from "@/components/Home/Process";
 import Areas from "@/components/Home/Areas";
 import Testimonials from "@/components/Home/Testimonials";
-import BlogInsights from "@/components/Home/BlogInsights";
+import BlogSlider from "@/components/Blog/BlogSlider";
 import RekutaCTA from "@/components/Home/RekutaCTA";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Process />
       <Areas />
       <Testimonials />
-      <BlogInsights />
+      <BlogSlider />
       <RekutaCTA />
     </>
   );

@@ -12,7 +12,7 @@ const HeroBanner = () => {
               </div>
 
               {/* Headline */}
-              <h1 className="display-4 fw-bold text-white lh-1 mb-3">
+              <h1 className="display-5 text-white lh-1 mb-3">
                 We’re Rekuta - Your AI Recruiter
               </h1>
 

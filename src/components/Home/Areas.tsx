@@ -51,7 +51,7 @@ interface Area {
     return (
       <section className="areas-section section-padding">
         <div className="container">
-          <h2 className="display-4 fw-bold text-white text-center mb-5">Areas we recruit in</h2>
+          <h2 className="display-4 text-white text-center mb-5">Areas we recruit in</h2>
   
           <div className="row g-4">
             {areas.map((area) => (

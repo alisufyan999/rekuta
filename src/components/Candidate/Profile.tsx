@@ -179,7 +179,7 @@ const Profile: React.FC = () => {
                     </div>
 
                     <div className="col-12">
-                      <button type="button" className="btn rk-profile-btn">Update Profile</button>
+                      <button type="button" className="btn btn-primary btn-pill width-fit">Update Profile</button>
                     </div>
                   </div>
                 </form>
@@ -210,7 +210,7 @@ const Profile: React.FC = () => {
                     </div>
 
                     <div className="col-12">
-                      <button type="button" className="btn rk-profile-btn">Update Profile</button>
+                      <button type="button" className="btn btn-primary btn-pill width-fit">Update Profile</button>
                     </div>
                   </div>
                 </form>
@@ -236,7 +236,7 @@ const Profile: React.FC = () => {
                       <p className="mb-1 fw-semibold">Choose a file or drag &amp; drop it here</p>
                       <p className="text-muted mb-3">JPEG, PNG, PDF, and DOC formats, up to 50MB</p>
 
-                      <label className="btn rk-profile-btn mb-0" htmlFor="rkProfileFile">Browse File</label>
+                      <label className="btn btn-primary btn-pill width-fit" htmlFor="rkProfileFile">Browse File</label>
                       <input
                         id="rkProfileFile"
                         type="file"
@@ -332,7 +332,7 @@ const Profile: React.FC = () => {
               </div>
 
               <div className="mt-3">
-                <button type="button" className="btn rk-apps-clear-btn">Clear History</button>
+                <button type="button" className="btn btn-primary btn-pill width-fit">Clear History</button>
               </div>
             </div>
 
@@ -345,7 +345,7 @@ const Profile: React.FC = () => {
             >
               <div className="rk-saved-head">
                 <h3 className="rk-profile-heading mb-3">Saved Jobs</h3>
-                <button type="button" className="btn rk-apps-clear-btn mb-3">
+                <button type="button" className="btn btn-primary btn-pill width-fit mb-3">
                   Send To My Email
                 </button>
                 <hr className="rk-saved-sep" />
@@ -386,7 +386,7 @@ const Profile: React.FC = () => {
                     </div>
 
                     <div className="col-12">
-                      <button type="button" className="btn rk-profile-btn">Save Job Search</button>
+                      <button type="button" className="btn btn-primary btn-pill width-fit">Save Job Search</button>
                     </div>
                   </div>
                 </form>
@@ -405,7 +405,7 @@ const Profile: React.FC = () => {
                     <h3 className="rk-apps-title mb-1">Connect your social media accounts</h3>
                     <p className="rk-apps-caption mb-0">Your google is currently connected.</p>
                     <div className="mt-3">
-                        <button type="button" className="btn rk-apps-clear-btn">Disconnected</button>
+                        <button type="button" className="btn btn-primary btn-pill width-fit">Disconnected</button>
                     </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ const FindJob = () => {
     <section className="find-job-section section-padding pt-0">
       <div className="container text-center">
         {/* Heading */}
-        <h2 className="fw-bold mb-4 find-job-section-title">Find your next job</h2>
+        <h2 className="mb-4 find-job-section-title">Find your next job</h2>
 
         {/* Search Form */}
         <form>

@@ -9,8 +9,8 @@ const Banner: React.FC = () => {
                 Your profile
                 </span>
 
-                <h1 className="rk-hero-title text-white fw-bold mb-2 text-center">
-                Showcase Your <span className="rk-hero-title-accent">Talent</span>. Get Discovered.
+                <h1 className="rk-hero-title text-white mb-2 text-center">
+                Showcase Your Talent. Get Discovered.
                 </h1>
 
                 <p className="rk-hero-subtitle text-white-50 mb-0 text-center">
