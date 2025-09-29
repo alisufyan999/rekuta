@@ -1,6 +1,6 @@
 import Hero from "@/components/Home/Hero";
 import Services from "@/components/Home/Services";
-import CTABanner from "@/components/Home/CTABanner";
+import SalarySurveyBanner from "@/components/About/SalarySurveyBanner";
 import JobListing from "@/components/Home/JobListing";
 import Process from "@/components/Home/Process";
 import Areas from "@/components/Home/Areas";
@@ -13,7 +13,8 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <CTABanner />
+      <SalarySurveyBanner />
+      <div className="section-padding pt-0"></div>
       <JobListing />
       <Process />
       <Areas />

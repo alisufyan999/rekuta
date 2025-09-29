@@ -1,8 +1,6 @@
 @font-face {
   font-family: "VisualSans";
-  src: url("/assets/fonts/Sans/Sans.woff2") format("woff2"),
-       url("/assets/fonts/Sans/Sans.woff") format("woff"),
-       url("/assets/fonts/Sans/Sans.ttf") format("truetype");
+  src: url("/assets/fonts/wfvisual/WFVisualSansVF.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -44,6 +42,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "VisualSans", sans-serif;
+  font-weight: 600 !important;
 }
 
  /* Header Styles */
@@ -103,11 +102,29 @@ h1, h2, h3, h4, h5, h6 {
  .navbar .nav-link:hover{ color:#000 !important; }
 
  /* Hero Section Styles */
- .hero-wrap{ background:#e1edff; border-radius:1.25rem; } /* big rounded wrapper */
+ .hero-wrap{ 
+  background:#e1edff; 
+  border-radius:1.25rem; 
+  position: relative;
+  overflow: hidden;
+} 
+.hero-wrap::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50%;
+  height: 100%;
+  background: url("/assets/images/formbg.png") no-repeat center center;
+  background-size: contain;
+}
  .left-card{ background:var(--brand); color:#fff; border-radius:1.5rem; }
- .left-card .badge{ background:#2a6cff !important; }
+ .left-card .badge{ 
+  background: rgb(255 255 255 / 27%) !important;
+  font-weight: 600;
+}
  .left-card .display-5{ 
-  font-weight:500; 
+  font-weight: 600; 
   line-height:1.1; }
  .btn-pill{ border-radius:2rem; padding:.6rem 1.1rem; }
  .search-card{ border-radius:1.25rem; box-shadow:0 10px 30px rgba(0,0,0,.08); }
@@ -125,8 +142,25 @@ h1, h2, h3, h4, h5, h6 {
  }
 
  /* Services Section Styles */
- .card-soft{background:var(--panel); border:0; border-radius:var(--radius);}
- .card-blue{background:var(--brand); color:#fff; border:0; border-radius:var(--radius);}
+ .card-soft{
+  background:var(--panel); 
+  border:0; 
+  border-radius:var(--radius);
+}
+.services-illus {
+  position: absolute;
+  right: 18px;
+  bottom: 40px;
+}
+.services-illus img {
+  display: block;
+}
+ .card-blue{
+  background:var(--brand); 
+  color:#fff; 
+  border:0; 
+  border-radius:var(--radius);
+}
  .width-fit{
 	width: fit-content;
  }
@@ -143,17 +177,38 @@ h1, h2, h3, h4, h5, h6 {
  .shape.sq{ width:56px;height:56px;border-radius:.7rem; opacity:.35; }
 
  /* Jobs Section Styles */
- .job-card{ border:0; border-radius:1rem; box-shadow:0 10px 24px rgba(0,0,0,.06); }
- .job-card .badge-dot{width:36px;height:36px;border-radius:50%; background:var(--brand); display:inline-block;}
+ .job-card{ 
+  border:0;
+  border-radius:1rem;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+ .job-card .badge-dot{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
  .meta small{ color:#6c757d; }               /* muted line with meta */
  .btn-apply{ border-radius:2rem; padding:.8rem 1rem; }
  .btn-cta{ background:var(--brand); border-color:var(--brand); border-radius:2rem; padding:.85rem 1.4rem; }
 
  /* Process Section Styles */
  .step-dot { width:10px;height:10px;background:#000;border-radius:50%;display:block;margin:10px auto 0; }
- .step-circle { width:110px;height:110px;border-radius:50%;background:var(--brand);margin:0 auto; }
+ .step-circle { 
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:var(--brand);
+  margin:0 auto; 
+  align-content: center;
+  display: grid;
+  justify-content: center;
+}
  .step-card { background:#f6f9ff;border:1px solid #e5ebf6;border-radius:14px; }
- .step-kicker { color:#1f66ff; letter-spacing:.06em; font-weight: 500; }
+ .step-kicker { color:#1f66ff; letter-spacing:.06em; font-weight: 600; }
 
  /* Areas Section Styles */
  .areas-section {
@@ -163,12 +218,14 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 1rem;
  }
  .area-icon {
-	display: inline-block;
-	width: 72px;
-	height: 72px;
-	border-radius: 14px;
-	background: #135DFF;
-	box-shadow: 0 8px 16px rgba(0,0,0,.08);
+	  background: #135dff;
+    border-radius: 14px;
+    width: 72px;
+    height: 72px;
+    display: grid;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .08);
+    justify-content: center;
+    align-content: center;
  }
 
  /* Testimonials Section Styles */
@@ -199,7 +256,10 @@ h1, h2, h3, h4, h5, h6 {
  .owl-theme .owl-dots .owl-dot.active span{ background:var(--brand); }
 
  /* About Section Styles */
- .rekuta-cta { background: var(--rekuta-blue); }
+ .rekuta-cta { 
+  background: url("/assets/images/about/ctabg.png") no-repeat center center;
+  background-size: cover;
+}
  .rekuta-cta .stat { right: .5rem; }
  .rekuta-cta .float-dot{
 	width:38px; height:38px; border-radius:50%;
@@ -269,8 +329,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /*About Page Css*/
 .rekuta-hero{
-    background: linear-gradient(135deg,#1f5ed8 0%, #1c55c9 40%, #134fbf 100%);
+    background: url("/assets/images/bannerbg.png") no-repeat center center;
+    background-size: cover;
     border-radius: 20px;
+    
     box-shadow: 0 12px 30px rgba(28,85,201,.18);
   }
   .aboutbannerrow .backdrop-blur{
@@ -330,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 28px; height: 28px; border-radius: 50%;
   background:#e6f4ea; color:#1f7a4c;
   display:inline-flex; align-items:center; justify-content:center;
-  font-size: 12px; font-weight: 500;
+  font-size: 12px; font-weight: 600;
 }
 .ai-bubble{
   width: 28px; height: 28px; border-radius: 50%;
@@ -376,7 +438,9 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
   }
   .rw-avatars img{
-    width:28px; height:28px; border-radius:50%;
+    width: 38px; 
+    height: 36px; 
+    border-radius:50%;
     border:2px solid #fff; object-fit:cover;
     box-shadow: 0 2px 6px rgba(0,0,0,.25);
     margin-left:-8px;
@@ -388,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
     position:absolute;
     width:40px; height:40px; border-radius:50%;
     align-items:center; justify-content:center;
-    background:#fff; color:#0e4fb8; font-weight: 500;
+    background:#fff; color:#0e4fb8; font-weight: 600;
     box-shadow: 0 6px 16px rgba(0,0,0,.12);
   }
   .rw-fab-1{ left:16%; top:16%; }
@@ -495,7 +559,7 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Card look: light gray tile with soft border & rounded corners */
 .svc-card{
-    background: #eeeeef;                 /* soft gray like the mock */
+    background: #fff;                 /* soft gray like the mock */
     border: 1px solid rgba(0,0,0,.06);
   }
   
@@ -729,7 +793,7 @@ section.whychoose {
 
 .find-job-search-btn {
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 40px;
 }
 
@@ -745,7 +809,7 @@ section.whychoose {
 
 .career-title {
   font-size: 2.8rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .career-tabs {
@@ -771,7 +835,7 @@ section.whychoose {
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
+  font-weight: 600;
   padding: 12px 20px;
   cursor: pointer;
   transition: 0.3s;
@@ -940,7 +1004,7 @@ section.whychoose {
 
 /* HEADINGS */
 .rk-profile-heading {
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: .2px;
 }
 .rk-profile-caption {
@@ -1010,7 +1074,7 @@ section.whychoose {
   
 /* ===== Applications Tab (global) ===== */
 .rk-apps-title { 
-  font-weight: 500; 
+  font-weight: 600; 
   letter-spacing: .2px; 
 }
 .rk-apps-caption { 
@@ -1062,7 +1126,7 @@ section.whychoose {
    
    /* Typography */
    .job-title {
-     font-weight: 500;
+     font-weight: 600;
      line-height: 1.2;
      letter-spacing: .1px;
      font-size: clamp(1.75rem, 3.5vw, 3rem);
@@ -1103,7 +1167,7 @@ section.whychoose {
 
    /* ============ Jobs – Two Ways Section ============ */
 .job-ways-title{
-  font-weight:500;
+  font-weight: 600;
   line-height:1.15;
   letter-spacing:.2px;
   font-size:clamp(1.8rem,4.2vw,3.1rem);
@@ -1125,7 +1189,7 @@ section.whychoose {
 }
 
 .job-card-title{
-  font-weight:500;
+  font-weight: 600;
   letter-spacing:.2px;
   line-height:1.2;
   font-size:clamp(1.25rem,2.6vw,2rem);
@@ -1232,7 +1296,7 @@ section.whychoose {
    }
    
    /* text styles */
-   .joblisting-title{ color:#182033; font-weight: 500; }
+   .joblisting-title{ color:#182033; font-weight: 600; }
    .joblisting-sub{ color:#6b7280; }
    .joblisting-meta{
      display:grid;
@@ -1306,7 +1370,7 @@ section.whychoose {
   
   /* title & sub */
   .jobdescription-title{
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing:.2px;
     line-height:1.2;
   }
@@ -1351,13 +1415,13 @@ section.whychoose {
    Job Description (global)
    ============================ */
 .jobdescription-title{
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing:.2px;
 }
 .jobdescription-intro{ max-width: 70ch; }
 
 .jobdescription-subtitle{
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Bulleted lists */
@@ -1389,7 +1453,7 @@ section.whychoose {
 
 /* Sidebar */
 .jobdescription-aside-title{
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Similar role card */
@@ -1413,7 +1477,7 @@ section.whychoose {
 }
 
 .jobdescription-role-title{
-  font-weight: 500;
+  font-weight: 600;
   color:#182033;
 }
 
@@ -1487,7 +1551,7 @@ section.whychoose {
     font-weight:600;font-size:.8rem;
   }
   .jobapplication-title{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height:1.2;
   }
@@ -1513,7 +1577,7 @@ section.whychoose {
     display:grid;
     grid-template-columns: repeat(2, 1fr);          /* mobile: single column */
     gap:.8rem 1.5rem;
-    font-weight:500;
+    font-weight: 600;
     text-align: left;
   }
   .jobapplication-meta li{ list-style:none; }
@@ -1524,7 +1588,7 @@ section.whychoose {
    Job Application (jobapplication-*)
    ============================ */
 .jobapplication-heading{ 
-  font-weight: 500; 
+  font-weight: 600; 
 }
 
 .jobapplication-panel{
@@ -1573,12 +1637,12 @@ section.whychoose {
   color:#fff;
   border-radius:999px;
   padding:.7rem 1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* right column */
-.jobapplication-role{ font-weight: 500; }
-.jobapplication-subtitle{ font-weight: 500; }
+.jobapplication-role{ font-weight: 600; }
+.jobapplication-subtitle{ font-weight: 600; }
 .jobapplication-box{
   border-bottom: 1px solid #cbcbcb;
 }
@@ -1614,7 +1678,7 @@ section.whychoose {
    Login Main (.loginmain-*)
    ============================ */
 .loginmain-title{ 
-  font-weight:500; 
+  font-weight: 600; 
   font-size: 2.5rem;
 }
 
@@ -1627,7 +1691,7 @@ section.whychoose {
 }
 .loginmain-quote{
   font-size: 2.1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.45;
   color: #fff;
 }
@@ -1745,7 +1809,7 @@ section.whychoose {
 }
 
 .blogmain-title{
-  font-weight:500;
+  font-weight: 600;
   letter-spacing:.2px;
   line-height:1.2;
 }
@@ -1803,7 +1867,7 @@ section.whychoose {
   }
   
   .blogdetail-title{
-    font-weight: 500;
+    font-weight: 600;
     line-height:1.2;
     border-bottom:1px solid #eef2fa;
     padding-bottom:.75rem;
@@ -1832,8 +1896,8 @@ section.whychoose {
   }
   
   /* headings inside article */
-  .blogdetail-h2{ font-weight: 500; margin: .5rem 0 1rem; }
-  .blogdetail-h3{ font-weight: 500; margin: 1.5rem 0 .75rem; }
+  .blogdetail-h2{ font-weight: 600; margin: .5rem 0 1rem; }
+  .blogdetail-h3{ font-weight: 600; margin: 1.5rem 0 .75rem; }
   
   /* checklists */
   .blogdetail-checklist li{

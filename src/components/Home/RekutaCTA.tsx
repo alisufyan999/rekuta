@@ -10,12 +10,12 @@ const RekutaCTA = () => {
               <h2 className="display-5 text-white mb-3">
                 I'm Rekuta, Are you?
               </h2>
-              <p className="lead text-white-50 mb-4">
+              <p className="text-white mb-4">
                 Join us in redefining recruitment with the power of AI. At rekuta.at, we're not just connecting candidates
                 to jobs—we're revolutionizing how talent meets opportunity. Our AI recruiter is designed to think smarter,
                 move faster, and deliver results that traditional hiring can't match.
               </p>
-              <p className="text-white-50 mb-4">
+              <p className="text-white mb-4">
                 We believe in fair, efficient, and intelligent hiring that empowers businesses to scale and professionals to
                 grow. With Rekuta, you'll experience accelerated placements, data-driven insights, and a future-proof way of
                 building teams.

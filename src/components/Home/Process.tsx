@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ProcessStep {
     id: number;
     stepNumber: string;
@@ -48,7 +50,9 @@ interface ProcessStep {
           <div className="row g-4">
             {steps.map((step) => (
               <div key={step.id} className="col-12 col-lg-3">
-                <div className="step-circle"></div>
+                <div className="step-circle">
+                  <Image src="/assets/images/home/icon1.png" alt="Process" width={60} height={60} />
+                </div>
                 <span className="step-dot"></span>
                 <div className="p-4 step-card mt-3">
                   <div className="step-kicker mb-2">{step.stepNumber}</div>

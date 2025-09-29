@@ -16,7 +16,9 @@ export default function Contact() {
       <ContactSection />
       <Map />
       <CareerCtas />
+      <div className="section-padding pt-0"></div>
       <SalarySurveyBanner />
+      <div className="section-padding pt-0"></div>
       <ServicesGrid />
       <ClientCentricStats />
       <Faqs />

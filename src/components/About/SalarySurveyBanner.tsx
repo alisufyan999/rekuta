@@ -14,7 +14,7 @@ export default function SalarySurveyBanner() {
               {/* LEFT: text */}
               <div className="col-lg-6">
                 <h1 className="display-5 text-white mb-2">
-                  Robert Walters 2025<br />Salary Survey
+                  Robert Walters 2025 Salary Survey
                 </h1>
                 <p className="text-white-50 mb-4">
                   Explore the salary and hiring trends in your industry.
@@ -40,7 +40,7 @@ export default function SalarySurveyBanner() {
               {/* RIGHT: person + floating stats */}
               <div className="col-lg-6">
               <Image 
-                    src="/assets/images/about/about-side2.png" 
+                    src="/assets/images/about/about-side5.png" 
                     alt="About section image"
                     width={600}
                     height={500}

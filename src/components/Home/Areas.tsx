@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Area {
     id: number;
     title: string;
@@ -57,7 +59,9 @@ interface Area {
             {areas.map((area) => (
               <div key={area.id} className="col-12 col-md-6 col-lg-3">
                 <div className="area-card bg-light p-4 shadow-sm h-100 rounded-4">
-                  <span className="area-icon mb-3"></span>
+                  <span className="area-icon mb-3">
+                    <Image src="/assets/images/home/icon1.png" alt="Areas" width={45} height={45} />
+                  </span>
                   <h5 className="fw-bold mb-2">{area.title}</h5>
                   <p className="text-muted mb-0">{area.description}</p>
                 </div>

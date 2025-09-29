@@ -22,7 +22,7 @@ export default function CareerCtas() {
     ];
   
     return (
-      <section className="cta-band section-padding mb-5">
+      <section className="cta-band section-padding">
         <div className="container">
           <div className="row g-4 g-md-5">
             {items.map(({ title, text, cta }, i) => (
