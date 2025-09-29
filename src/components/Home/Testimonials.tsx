@@ -89,10 +89,9 @@ const TestimonialNew: React.FC = () => {
   useEffect(() => {
     const start = () => {
       if (typeof window === 'undefined') return;
-      // @ts-ignore
       const $ = (window as any).jQuery as any;
       if (!$ || !$.fn || !$.fn.owlCarousel) {
-        // wait a tick if scripts haven’t attached yet
+        // wait a tick if scripts haven't attached yet
         setTimeout(start, 50);
         return;
       }
@@ -192,7 +191,7 @@ const TestimonialNew: React.FC = () => {
                             <div className="newtesti-stars mb-2">{renderStars(t.rating)}</div>
 
                             <p className="newtesti-quote small mb-3">
-                            “{t.quote}”
+                            "{t.quote}"
                             </p>
 
                             <div className="d-flex flex-wrap gap-2">
@@ -230,7 +229,7 @@ const TestimonialNew: React.FC = () => {
 
                         <div className="newtesti-stars mb-2">{renderStars(t.rating)}</div>
 
-                        <p className="newtesti-quote small mb-3">“{t.quote}”</p>
+                        <p className="newtesti-quote small mb-3">"{t.quote}"</p>
 
                         <div className="d-flex flex-wrap gap-2">
                         {t.tags.map((tag, idx) => (
