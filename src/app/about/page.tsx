@@ -2,7 +2,7 @@ import HeroBanner from "@/components/About/HeroBanner";
 import AiRecruitHero from "@/components/About/AiRecruitHero";
 import AboutTiles from "@/components/About/AboutTiles";
 import SalarySurveyBanner from "@/components/About/SalarySurveyBanner";
-import Testimonials from "@/components/Home/Testimonials";
+import TestimonialNew from "@/components/Home/Testimonials";
 import BlogSlider from "@/components/Blog/BlogSlider";
 import RekutaCTA from "@/components/Home/RekutaCTA";
 
@@ -13,7 +13,7 @@ export default function About() {
       <AiRecruitHero />
       <AboutTiles />
       <SalarySurveyBanner />
-      <Testimonials />
+      <TestimonialNew />
       <BlogSlider />
       <RekutaCTA />
     </>
