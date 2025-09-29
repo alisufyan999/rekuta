@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import "../../public/assets/css/style.css";
@@ -22,6 +23,13 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// ✅ VisualSans font integration
+const visualSans = localFont({
+  src: "../../public/assets/fonts/wfvisual/WFVisualSansVF.ttf",
+  variable: "--font-visual-sans",
   display: "swap",
 });
 
@@ -54,7 +62,7 @@ export default function RootLayout({
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
+        className={` ${visualSans.variable} ${inter.variable} antialiased`}
       >
         <Header />
         {children}
