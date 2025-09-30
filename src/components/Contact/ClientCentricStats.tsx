@@ -56,13 +56,13 @@ export default function ClientCentricStats() {
   return (
     <section className="section-padding pb-0">
       <div className="container">
-        <div ref={rootRef} className="stats-hero rounded-4 p-4 p-md-5 position-relative overflow-hidden">
+        <div ref={rootRef} className="rounded-4 p-4 p-md-5 position-relative overflow-hidden counterBg">
           {/* Headline */}
           <div className="row justify-content-center">
             <div className="col-lg-6 col-sm-12">
-            <h2 className="text-white text-center display-5 lh-sm mb-4 mb-md-5">
-              Tailoring Success With A Client-Centric Approach
-            </h2>
+              <h2 className="text-white text-center display-5 lh-sm mb-4 mb-md-5">
+                Tailoring Success With A Client-Centric Approach
+              </h2>
             </div>
           </div>
 

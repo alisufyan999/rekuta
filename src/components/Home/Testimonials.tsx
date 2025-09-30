@@ -166,7 +166,7 @@ const TestimonialNew: React.FC = () => {
                 <h2 className="text-center display-5 fw-bold mb-4">Our Testimonials</h2>
             </div>
         </div>
-        <div className="row">
+        <div className="row  testimonailsFade">
             <div className="col-lg-12 col-sm-12">
                 <div className="newtesti-owl owl-carousel owl-theme">
                     {DATA.map((t) => (

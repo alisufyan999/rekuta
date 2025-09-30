@@ -42,7 +42,7 @@ const items: Item[] = [
 
 export default function ServicesGrid() {
   return (
-    <section className="section-padding bg-light">
+    <section className="section-padding readBg">
       <div className="container">
         <div className="row g-3 g-md-4">
           {items.map((item, i) => (

@@ -33,37 +33,28 @@ const Header = () => {
   ];
 
   return (
-    <nav 
-      className={`navbar navbar-expand-lg bg-white border-bottom py-2 ${isScrolled ? 'fixed-top' : ''}`}
-      style={isScrolled ? { zIndex: 1030 } : {}}
-    >
+    <nav
+      className={`navbar navbar-expand-lg bg-white ${isScrolled ? 'fixed-top' : ''}`}
+      style={isScrolled ? { zIndex: 1030 } : {}}>
       <div className="container align-items-center">
-        {/* Left: Logo */}
         <Link className="navbar-brand fw-bold header-logo m-0" href="/">
           LOGO
         </Link>
-
-        {/* Mobile toggler */}
-        <button 
-          className="navbar-toggler" 
-          type="button" 
+        <button
+          className="navbar-toggler d-lg-none"
+          type="button"
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
           aria-controls="mainNav"
         >
           <i className="fa-solid fa-bars"></i>
         </button>
-
-        {/* Center: Nav */}
-        <div 
-          className={`navbar-collapse justify-content-center ${isMenuOpen ? 'show' : ''}`} 
-          id="mainNav"
-        >
+        <div className="d-none d-lg-flex justify-content-center flex-grow-1">
           <ul className="navbar-nav gap-lg-4 gap-3 align-items-lg-center">
             {navItems.map((item, index) => (
               <li key={index} className="nav-item">
-                <Link 
-                  className={`nav-link header-link ${item.isActive ? 'active-dot' : ''}`} 
+                <Link
+                  className={`nav-link header-link ${item.isActive ? 'active-dot' : ''}`}
                   href={item.href}
                 >
                   {item.label}
@@ -72,12 +63,30 @@ const Header = () => {
             ))}
           </ul>
         </div>
-
-        {/* Right: My Account */}
-        <Link 
-          href="/login" 
-          className="btn btn-link d-none d-lg-inline-flex align-items-center text-decoration-none header-account"
-        >
+        <div className={`mobile-menu d-lg-none ${isMenuOpen ? 'open' : ''}`} id="mainNav">
+          <div className="d-flex justify-content-between align-items-center mb-4">
+            <Link className="navbar-brand fw-bold header-logo m-0" href="/">
+              LOGO
+            </Link>
+            <button className="close-btn" onClick={toggleMenu}>×</button>
+          </div>
+          <ul className="navbar-nav gap-3">
+            {navItems.map((item, index) => (
+              <li key={index} className="nav-item">
+                <Link
+                  className={`nav-link header-link ${item.isActive ? 'active-dot' : ''}`}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Link
+          href="/login"
+          className="btn btn-link d-none d-lg-inline-flex align-items-center text-decoration-none header-account">
           <FontAwesomeIcon icon={faUser} className="account-circle me-2" />
           <span className="text-dark">My Account</span>
         </Link>

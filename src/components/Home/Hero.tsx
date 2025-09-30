@@ -36,20 +36,17 @@ const Hero = () => {
         });
       }
     };
-
-    // Initialize after a short delay to ensure scripts are loaded
     const timer = setTimeout(initCarousel, 500);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <section className="section-padding">
+    <section className="pb-5">
       <div className="container">
         <div className="hero-wrap p-3 p-md-4">
-          <div className="row g-4 align-items-start">
-            {/* LEFT: blue panel */}
-            <div className="col-lg-7">
+          <div className="row">
+            <div className="col-lg-6">
               <div className="left-card p-4 p-md-5 h-100">
                 <span className="badge text-white rounded-pill px-3 py-2 mb-3">
                   Best Recommendation Job
@@ -77,36 +74,36 @@ const Hero = () => {
                   </div>
                   <div className="owl-carousel owl-theme" id="trusted-logos-carousel">
                     <div className="item">
-                      <Image 
-                        src="/assets/images/company-logo.png" 
-                        className="trusted-logo" 
+                      <Image
+                        src="/assets/images/company-logo.png"
+                        className="trusted-logo"
                         alt="Company 1"
                         width={120}
                         height={60}
                       />
                     </div>
                     <div className="item">
-                      <Image 
-                        src="/assets/images/company-logo-1.png" 
-                        className="trusted-logo" 
+                      <Image
+                        src="/assets/images/company-logo-1.png"
+                        className="trusted-logo"
                         alt="Company 2"
                         width={120}
                         height={60}
                       />
                     </div>
                     <div className="item">
-                      <Image 
-                        src="/assets/images/company-logo-2.png" 
-                        className="trusted-logo" 
+                      <Image
+                        src="/assets/images/company-logo-2.png"
+                        className="trusted-logo"
                         alt="Company 3"
                         width={120}
                         height={60}
                       />
                     </div>
                     <div className="item">
-                      <Image 
-                        src="/assets/images/company-logo-3.png" 
-                        className="trusted-logo" 
+                      <Image
+                        src="/assets/images/company-logo-3.png"
+                        className="trusted-logo"
                         alt="Company 4"
                         width={120}
                         height={60}
@@ -116,151 +113,149 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-
-            {/* RIGHT: tabs + form */}
-            <div className="col-lg-5 my-auto">
-              <div className="card search-card p-3 p-md-4">
-                <div className="d-flex align-items-center mb-3">
-                  <span 
-                    className="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle me-3" 
-                    style={{width: '44px', height: '44px'}}
-                  >
-                    <Image 
-                      src="/assets/images/Vector.svg" 
-                      className="w-100" 
-                      style={{maxWidth: '1rem'}}
-                      alt="AI Icon"
-                      width={16}
-                      height={16}
-                    />
-                  </span>
-                  <h5 className="mb-0">AI for Recommendation Jobs</h5>
-                </div>
-
-                {/* Tabs rail */}
-                <div className="rail mb-3">
-                  <ul className="nav nav-pills justify-content-between" id="jobTabs" role="tablist">
-                    <li className="nav-item" role="presentation">
-                      <button 
-                        className="nav-link active px-4 py-2" 
-                        id="remote-tab" 
-                        data-bs-toggle="pill" 
-                        data-bs-target="#remote" 
-                        type="button" 
-                        role="tab" 
-                        aria-controls="remote" 
-                        aria-selected="true"
-                      >
-                        Remote
-                      </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <button 
-                        className="nav-link px-4 py-2" 
-                        id="freelance-tab" 
-                        data-bs-toggle="pill" 
-                        data-bs-target="#freelance" 
-                        type="button" 
-                        role="tab" 
-                        aria-controls="freelance" 
-                        aria-selected="false"
-                      >
-                        Freelance
-                      </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <button 
-                        className="nav-link px-4 py-2" 
-                        id="onsite-tab" 
-                        data-bs-toggle="pill" 
-                        data-bs-target="#onsite" 
-                        type="button" 
-                        role="tab" 
-                        aria-controls="onsite" 
-                        aria-selected="false"
-                      >
-                        Onsite
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Tab panes */}
-                <div className="tab-content" id="jobTabsContent">
-                  {/* Remote */}
-                  <div 
-                    className="tab-pane fade show active" 
-                    id="remote" 
-                    role="tabpanel" 
-                    aria-labelledby="remote-tab" 
-                    tabIndex={0}
-                  >
-                    <div className="mb-2 small text-muted fw-semibold">Location</div>
-                    <select className="form-select mb-3">
-                      <option value="bali">Bali Indonesia</option>
-                      <option value="karachi">Karachi Pakistan</option>
-                      <option value="dubai">Dubai UAE</option>
-                      <option value="singapore">Singapore</option>
-                    </select>
-
-                    <div className="mb-2 small text-muted fw-semibold">Job Name</div>
-                    <select className="form-select mb-4">
-                      <option value="ui-ux">UI/UX Designer</option>
-                      <option value="frontend">Frontend Engineer</option>
-                      <option value="product">Product Manager</option>
-                    </select>
-
-                    <button className="btn btn-dark w-100">Search</button>
+            <div className="col-lg-6">
+              <div className='bannerFormBg'>
+                <div className="card search-card p-3 p-md-4">
+                  <div className="d-flex align-items-center mb-3">
+                    <span
+                      className="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle me-3"
+                      style={{ width: '44px', height: '44px' }}
+                    >
+                      <Image
+                        src="/assets/images/Vector.svg"
+                        className="w-100"
+                        style={{ maxWidth: '1rem' }}
+                        alt="AI Icon"
+                        width={16}
+                        height={16}
+                      />
+                    </span>
+                    <h5 className="mb-0">AI for Recommendation Jobs</h5>
+                  </div>
+                  <div className="rail mb-3">
+                    <ul className="nav nav-pills justify-content-between" id="jobTabs" role="tablist">
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link active px-4 py-2"
+                          id="remote-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#remote"
+                          type="button"
+                          role="tab"
+                          aria-controls="remote"
+                          aria-selected="true"
+                        >
+                          Remote
+                        </button>
+                      </li>
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link px-4 py-2"
+                          id="freelance-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#freelance"
+                          type="button"
+                          role="tab"
+                          aria-controls="freelance"
+                          aria-selected="false"
+                        >
+                          Freelance
+                        </button>
+                      </li>
+                      <li className="nav-item" role="presentation">
+                        <button
+                          className="nav-link px-4 py-2"
+                          id="onsite-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#onsite"
+                          type="button"
+                          role="tab"
+                          aria-controls="onsite"
+                          aria-selected="false"
+                        >
+                          Onsite
+                        </button>
+                      </li>
+                    </ul>
                   </div>
 
-                  {/* Freelance */}
-                  <div 
-                    className="tab-pane fade" 
-                    id="freelance" 
-                    role="tabpanel" 
-                    aria-labelledby="freelance-tab" 
-                    tabIndex={0}
-                  >
-                    <div className="mb-2 small text-muted fw-semibold">Location</div>
-                    <select className="form-select mb-3">
-                      <option value="bali">Bali Indonesia</option>
-                      <option value="lahore">Lahore Pakistan</option>
-                      <option value="riyadh">Riyadh KSA</option>
-                    </select>
+                  {/* Tab panes */}
+                  <div className="tab-content" id="jobTabsContent">
+                    {/* Remote */}
+                    <div
+                      className="tab-pane fade show active"
+                      id="remote"
+                      role="tabpanel"
+                      aria-labelledby="remote-tab"
+                      tabIndex={0}
+                    >
+                      <div className="mb-2 small text-muted fw-semibold">Location</div>
+                      <select className="form-select mb-3">
+                        <option value="bali">Bali Indonesia</option>
+                        <option value="karachi">Karachi Pakistan</option>
+                        <option value="dubai">Dubai UAE</option>
+                        <option value="singapore">Singapore</option>
+                      </select>
 
-                    <div className="mb-2 small text-muted fw-semibold">Job Name</div>
-                    <select className="form-select mb-4">
-                      <option value="graphic">Graphic Designer</option>
-                      <option value="seo">SEO Specialist</option>
-                      <option value="content">Content Writer</option>
-                    </select>
+                      <div className="mb-2 small text-muted fw-semibold">Job Name</div>
+                      <select className="form-select mb-4">
+                        <option value="ui-ux">UI/UX Designer</option>
+                        <option value="frontend">Frontend Engineer</option>
+                        <option value="product">Product Manager</option>
+                      </select>
 
-                    <button className="btn btn-dark w-100">Search</button>
-                  </div>
+                      <button className="btn btn-dark w-100">Search</button>
+                    </div>
 
-                  {/* Onsite */}
-                  <div 
-                    className="tab-pane fade" 
-                    id="onsite" 
-                    role="tabpanel" 
-                    aria-labelledby="onsite-tab" 
-                    tabIndex={0}
-                  >
-                    <div className="mb-2 small text-muted fw-semibold">Location</div>
-                    <select className="form-select mb-3">
-                      <option value="bali">Bali Indonesia</option>
-                      <option value="islamabad">Islamabad Pakistan</option>
-                      <option value="london">London UK</option>
-                    </select>
+                    {/* Freelance */}
+                    <div
+                      className="tab-pane fade"
+                      id="freelance"
+                      role="tabpanel"
+                      aria-labelledby="freelance-tab"
+                      tabIndex={0}
+                    >
+                      <div className="mb-2 small text-muted fw-semibold">Location</div>
+                      <select className="form-select mb-3">
+                        <option value="bali">Bali Indonesia</option>
+                        <option value="lahore">Lahore Pakistan</option>
+                        <option value="riyadh">Riyadh KSA</option>
+                      </select>
 
-                    <div className="mb-2 small text-muted fw-semibold">Job Name</div>
-                    <select className="form-select mb-4">
-                      <option value="account">Account Executive</option>
-                      <option value="hr">HR Manager</option>
-                      <option value="data">Data Analyst</option>
-                    </select>
+                      <div className="mb-2 small text-muted fw-semibold">Job Name</div>
+                      <select className="form-select mb-4">
+                        <option value="graphic">Graphic Designer</option>
+                        <option value="seo">SEO Specialist</option>
+                        <option value="content">Content Writer</option>
+                      </select>
 
-                    <button className="btn btn-dark w-100">Search</button>
+                      <button className="btn btn-dark w-100">Search</button>
+                    </div>
+
+                    {/* Onsite */}
+                    <div
+                      className="tab-pane fade"
+                      id="onsite"
+                      role="tabpanel"
+                      aria-labelledby="onsite-tab"
+                      tabIndex={0}
+                    >
+                      <div className="mb-2 small text-muted fw-semibold">Location</div>
+                      <select className="form-select mb-3">
+                        <option value="bali">Bali Indonesia</option>
+                        <option value="islamabad">Islamabad Pakistan</option>
+                        <option value="london">London UK</option>
+                      </select>
+
+                      <div className="mb-2 small text-muted fw-semibold">Job Name</div>
+                      <select className="form-select mb-4">
+                        <option value="account">Account Executive</option>
+                        <option value="hr">HR Manager</option>
+                        <option value="data">Data Analyst</option>
+                      </select>
+
+                      <button className="btn btn-dark w-100">Search</button>
+                    </div>
                   </div>
                 </div>
               </div>

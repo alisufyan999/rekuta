@@ -1,4 +1,5 @@
 "use client";
+import { CLockIcon, LocationIcon, SalaryIcon } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,9 +12,9 @@ interface Job {
   location: string;
   salary: string;
   image: string;
-  typeIcon: string,
-  locationIcon:string,
-  salaryIcon:string,
+  typeIcon: React.ReactNode;
+  locationIcon: React.ReactNode;
+  salaryIcon: React.ReactNode;
 }
 
 const JobListings = () => {
@@ -27,9 +28,9 @@ const JobListings = () => {
       location: "Onsite",
       salary: "$6,800",
       image: "/assets/images/home/jobicon1.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     },
     {
       id: 2,
@@ -40,9 +41,9 @@ const JobListings = () => {
       location: "Hybrid",
       salary: "$2,800",
       image: "/assets/images/home/jobicon2.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     },
     {
       id: 3,
@@ -53,9 +54,9 @@ const JobListings = () => {
       location: "On-Site",
       salary: "$4,200",
       image: "/assets/images/home/jobicon3.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     },
     {
       id: 4,
@@ -66,9 +67,9 @@ const JobListings = () => {
       location: "Onsite",
       salary: "$5,900",
       image: "/assets/images/home/jobicon4.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     },
     {
       id: 5,
@@ -79,9 +80,9 @@ const JobListings = () => {
       location: "Remote",
       salary: "$2,800",
       image: "/assets/images/home/jobicon5.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     },
     {
       id: 6,
@@ -92,9 +93,9 @@ const JobListings = () => {
       location: "Onsite",
       salary: "$4,200",
       image: "/assets/images/home/jobicon6.png",
-      typeIcon: "/assets/images/icons/type.png",
-      locationIcon: "/assets/images/icons/location.png",
-      salaryIcon: "/assets/images/icons/salary.png"
+      typeIcon: <CLockIcon />,
+      locationIcon: <LocationIcon />,
+      salaryIcon: <SalaryIcon />
     }
   ];
 
@@ -134,16 +135,16 @@ const JobListings = () => {
                 </p>
 
                 <div className="meta d-flex gap-4 small mb-3 px-1">
-                  <span>
-                    <Image src={job.typeIcon} alt="Type Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                  <span className="d-flex align-items-center gap-1 text-black">
+                    {job.typeIcon}
                     {job.type}
                   </span>
-                  <span>
-                    <Image src={job.locationIcon} alt="Location Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                  <span className="d-flex align-items-center gap-1 text-black">
+                    {job.locationIcon}
                     {job.location}
                   </span>
-                  <span>
-                    <Image src={job.salaryIcon} alt="Salary Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                  <span className="d-flex align-items-center gap-1 text-black">
+                    {job.salaryIcon}
                     {job.salary}
                   </span>
                 </div>
