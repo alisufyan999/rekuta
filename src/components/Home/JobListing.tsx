@@ -11,6 +11,9 @@ interface Job {
   location: string;
   salary: string;
   image: string;
+  typeIcon: string,
+  locationIcon:string,
+  salaryIcon:string,
 }
 
 const JobListings = () => {
@@ -23,7 +26,10 @@ const JobListings = () => {
       type: "Full-Time",
       location: "Onsite",
       salary: "$6,800",
-      image: "/assets/images/home/jobicon1.png"
+      image: "/assets/images/home/jobicon1.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     },
     {
       id: 2,
@@ -33,7 +39,10 @@ const JobListings = () => {
       type: "Part-Time",
       location: "Hybrid",
       salary: "$2,800",
-      image: "/assets/images/home/jobicon2.png"
+      image: "/assets/images/home/jobicon2.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     },
     {
       id: 3,
@@ -43,7 +52,10 @@ const JobListings = () => {
       type: "Full-Time",
       location: "On-Site",
       salary: "$4,200",
-      image: "/assets/images/home/jobicon3.png"
+      image: "/assets/images/home/jobicon3.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     },
     {
       id: 4,
@@ -53,7 +65,10 @@ const JobListings = () => {
       type: "Full-Time",
       location: "Onsite",
       salary: "$5,900",
-      image: "/assets/images/home/jobicon4.png"
+      image: "/assets/images/home/jobicon4.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     },
     {
       id: 5,
@@ -63,7 +78,10 @@ const JobListings = () => {
       type: "Part-Time",
       location: "Remote",
       salary: "$2,800",
-      image: "/assets/images/home/jobicon5.png"
+      image: "/assets/images/home/jobicon5.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     },
     {
       id: 6,
@@ -73,7 +91,10 @@ const JobListings = () => {
       type: "Full-Time",
       location: "Onsite",
       salary: "$4,200",
-      image: "/assets/images/home/jobicon6.png"
+      image: "/assets/images/home/jobicon6.png",
+      typeIcon: "/assets/images/icons/type.png",
+      locationIcon: "/assets/images/icons/location.png",
+      salaryIcon: "/assets/images/icons/salary.png"
     }
   ];
 
@@ -83,7 +104,7 @@ const JobListings = () => {
   };
 
   return (
-    <section className="section-padding bg-light">
+    <section className="section-padding bgJob">
       <div className="container">
         {/* Heading */}
         <div className="text-center mb-4">
@@ -112,13 +133,22 @@ const JobListings = () => {
                   {job.description}
                 </p>
 
-                <div className="meta d-flex justify-content-between small mb-3 px-1">
-                  <span>{job.type}</span>
-                  <span>{job.location}</span>
-                  <span>{job.salary}</span>
+                <div className="meta d-flex gap-4 small mb-3 px-1">
+                  <span>
+                    <Image src={job.typeIcon} alt="Type Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                    {job.type}
+                  </span>
+                  <span>
+                    <Image src={job.locationIcon} alt="Location Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                    {job.location}
+                  </span>
+                  <span>
+                    <Image src={job.salaryIcon} alt="Salary Icon" width={16} height={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                    {job.salary}
+                  </span>
                 </div>
 
-                <button 
+                <button
                   className="btn btn-dark w-100 btn-apply"
                   onClick={() => handleApply(job.id)}
                 >

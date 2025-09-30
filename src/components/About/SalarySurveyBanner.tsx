@@ -16,7 +16,7 @@ export default function SalarySurveyBanner() {
                 <h1 className="display-5 text-white mb-2">
                   Robert Walters 2025 Salary Survey
                 </h1>
-                <p className="text-white-50 mb-4">
+                <p className="text-white mb-4">
                   Explore the salary and hiring trends in your industry.
                 </p>
   
