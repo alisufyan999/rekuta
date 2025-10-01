@@ -62,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="small text-white-50 mb-2">Social Media</div>
-            <div className="d-flex align-items-center gap-2 social-icons-modern">
+            <div className="d-flex align-items-center social-icons-modern">
               <a href="#" className="text-white-50 text-decoration-none" title="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>

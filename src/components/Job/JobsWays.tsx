@@ -19,7 +19,7 @@ const JobsWays: React.FC = () => {
             {/* Cards */}
             <div className="row g-4 justify-content-center">
                 {/* Upload resume */}
-                <div className="col-12 col-md-10 col-lg-6">
+                <div className="col-12 col-md-10 col-lg-5">
                 <div className="job-card job-card--light position-relative p-4 p-lg-5 rounded-4 h-100">
                     <h3 className="job-card-title mb-2">Upload your resume</h3>
                     <p className="job-card-text mb-4">
@@ -42,7 +42,7 @@ const JobsWays: React.FC = () => {
                 </div>
 
                 {/* Search jobs */}
-                <div className="col-12 col-md-10 col-lg-6">
+                <div className="col-12 col-md-10 col-lg-5">
                 <div className="job-card job-card--brand position-relative p-4 p-lg-5 rounded-4 h-100">
                     <h3 className="job-card-title job-card-title--onbrand mb-2">Search available jobs</h3>
                     <p className="job-card-text job-card-text--onbrand mb-4">

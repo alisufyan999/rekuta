@@ -145,7 +145,7 @@ const BlogDetail: React.FC = () => {
 
                 {/* share */}
                 <div className="blogdetail-share d-flex align-items-center justify-content-between rounded-4 p-3 p-md-3">
-                <span className="text-muted small">
+                <span className="small">
                     Like what you see? Share with a friend.
                 </span>
                 <div className="d-flex gap-2">

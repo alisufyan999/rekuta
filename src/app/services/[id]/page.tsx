@@ -1,46 +1,36 @@
 import ServiceHero from "@/components/ServiceDetails/ServiceHero";
 import AboutSection from "@/components/ServiceDetails/AboutSection";
 import ExpertiseSection from "@/components/ServiceDetails/ExpertiseSection";
-// import Organization from "@/components/ServiceDetails/Organization";
 import WhyChoose from "@/components/ServiceDetails/WhyChoose";
 import { servicesData } from "@/data/servicesData";
-
-// import ServiceTestimonials from "@/components/ServiceDetails/ServiceTestimonials";
-// import { Testimonial } from "@/components/ServiceDetails/ServiceTestimonials";
-
 import Testimonials from "@/components/Home/Testimonials";
-
 import SalarySurveyBanner from "@/components/About/SalarySurveyBanner";
-
-// import ServiceSalarySurvey from "@/components/ServiceDetails/ServiceSalarySurvey";
-
 import DynamicServiceCards from "@/components/ServiceDetails/DynamicServiceCards";
 import ContactSection from "@/components/Contact/ContactSection";
 import ServiceFAQs from "@/components/ServiceDetails/ServiceFAQs";
 import ServiceRekuta from "@/components/ServiceDetails/ServiceRekuta";
+import TrustSlider from "@/components/ServiceDetails/TrustSlider";
+import ClientCentricStats from "@/components/Contact/ClientCentricStats";
+import ServicesTiles from "@/components/ServiceDetails/ServicesTiles";
+import AwardImages from "@/components/ServiceDetails/AwardImages";
 
 type Props = { params: Promise<{ id: string }> };
-
 export async function generateStaticParams() {
   return servicesData.map((s) => ({ id: s.id }));
 }
-
 export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const svc = servicesData.find((s) => s.id === id);
   if (!svc) return {};
   return { title: `${svc.title} | Rekuta.ai`, description: svc.description };
 }
-
 export default async function ServiceDetailPage({ params }: Props) {
   const { id } = await params;
   const svc = servicesData.find((s) => s.id === id);
   if (!svc) return <div className="container py-5">Service not found.</div>;
-
   return (
     <>
       <ServiceHero eyebrow={svc.eyebrow} title={svc.title} description={svc.description} />
-
       {svc.aboutSection && (
         <AboutSection
           title={svc.aboutSection.title}
@@ -49,20 +39,10 @@ export default async function ServiceDetailPage({ params }: Props) {
           image={svc.aboutSection.image}
         />
       )}
-
       {svc.expertise && (
         <ExpertiseSection heading={svc.expertise.heading} items={svc.expertise.items} />
       )}
-
-      {/* {svc.organizations && (
-        <Organization
-          heading={svc.organizations.heading}
-          row1={svc.organizations.row1}
-          row2={svc.organizations.row2}
-          row3={svc.organizations.row3}
-        />
-      )} */}
-
+      <TrustSlider />
       {svc.whyChoose && (
         <WhyChoose
           heading={svc.whyChoose.heading}
@@ -70,41 +50,19 @@ export default async function ServiceDetailPage({ params }: Props) {
           image={svc.whyChoose.image}
         />
       )}
-      
+      <ServicesTiles />
+      <ClientCentricStats />
       <Testimonials />
-
-      {/* {svc.testimonials && (
-        <ServiceTestimonials
-          row1Testimonials={svc.testimonials.row1}
-          row2Testimonials={svc.testimonials.row2}
-        />
-      )} */}
-
-      {/* {svc.salarySurvey && (
-        <ServiceSalarySurvey
-          heading={svc.salarySurvey.heading}
-          subtext={svc.salarySurvey.subtext}
-          cta1={svc.salarySurvey.cta1}
-          cta2={svc.salarySurvey.cta2}
-          avatars={svc.salarySurvey.avatars}
-          label={svc.salarySurvey.label}
-          image={svc.salarySurvey.image}
-        />
-      )} */}
-
       <SalarySurveyBanner />
-
-{svc.dynamicserviceDetail && svc.dynamicserviceDetail.length >= 4 && (
-  <DynamicServiceCards serviceDetail={svc.dynamicserviceDetail} />
-)}
-
-<ContactSection/>
-
-{svc.faq && svc.faq.length > 0 && <ServiceFAQs faqs={svc.faq} />}
-
-{svc.servicerekuta && (
-  <ServiceRekuta serviceDetail={svc.servicerekuta} />
-)}
+      {svc.dynamicserviceDetail && svc.dynamicserviceDetail.length >= 4 && (
+        <DynamicServiceCards serviceDetail={svc.dynamicserviceDetail} />
+      )}
+      <AwardImages />
+      <ContactSection />
+      {svc.faq && svc.faq.length > 0 && <ServiceFAQs faqs={svc.faq} />}
+      {svc.servicerekuta && (
+        <ServiceRekuta serviceDetail={svc.servicerekuta} />
+      )}
 
     </>
   );

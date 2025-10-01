@@ -9,8 +9,7 @@ type Props = {
 export default function ExpertiseSection({ heading, items }: Props) {
   return (
     <section
-      className="section-padding"
-      style={{ background: "radial-gradient(120% 120% at 50% -10%, #1a56d6 0%, #0f43b7 40%, #0c3aa4 100%)" }}
+      className="section-padding areas-section"
     >
       <div className="container">
         <h2 className="text-center text-white display-5 mb-4 mb-md-5">

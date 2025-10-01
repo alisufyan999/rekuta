@@ -2,7 +2,7 @@
 
 const FindJob = () => {
   return (
-    <section className="find-job-section section-padding pt-0">
+    <section className="find-job-section pt-0 pb-0">
       <div className="container text-center">
         {/* Heading */}
         <h2 className="mb-4 find-job-section-title">Find your next job</h2>
@@ -15,14 +15,13 @@ const FindJob = () => {
                 {/* Job Title Input */}
                 <div className="col-12 col-md-5">
                   <div className="input-group find-job-input-group">
-                    <span className="input-group-text bg-white find-job-input-group-text">
-                      <i className="bi bi-search"></i>
+                    <span className="">
+                      <i className="fa-solid fa-magnifying-glass" style={{ color: "#142033" }}></i>
                     </span>
                     <input
                       type="text"
                       className="form-control find-job-input"
                       placeholder="Job Title, Skills, Or Keywords"
-                      defaultValue="Web Developer"
                     />
                   </div>
                 </div>
@@ -30,8 +29,8 @@ const FindJob = () => {
                 {/* Location Input */}
                 <div className="col-12 col-md-5">
                   <div className="input-group find-job-input-group">
-                    <span className="input-group-text bg-white find-job-input-group-text">
-                      <i className="bi bi-geo-alt"></i>
+                    <span className="">
+                      <i className="fa-solid fa-location-dot" style={{ color: "#000" }}></i>
                     </span>
                     <input
                       type="text"

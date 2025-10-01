@@ -1,5 +1,3 @@
-// /data/servicesData.ts
-
 export type ServiceDetail = {
   sectionTitle: string;
   sectionText: string;
@@ -70,18 +68,18 @@ export type ServiceRekuta = {
 };
 
 export type Service = {
-  id: string;                 // URL slug: /services/[id]
-  eyebrow: string;            // small badge text (hero)
-  title: string;              // hero title
-  description: string;        // hero paragraph
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
   serviceDetail: ServiceDetail[];
   aboutSection?: AboutSection;
   expertise?: {
     heading: string;
     items: ExpertiseItem[];
   };
-  organizations?: Organizations; 
-  whyChoose?: WhyChooseSection;// 👈 NEW
+  organizations?: Organizations;
+  whyChoose?: WhyChooseSection;
 
   testimonials?: {
     row1: Testimonial[];
@@ -164,57 +162,55 @@ export const servicesData: Service[] = [
         },
       ],
     },
-
-    // 👇 Organization logos data for the 3 Owl rows
     organizations: {
       heading: "Trusted by 11,000+ organizations worldwide",
       row1: [
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
       ],
       row2: [
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
       ],
       row3: [
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
-        { name: "Polymath",  src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
+        { name: "Polymath", src: "/assets/images/about/org1.png" },
       ],
     },
 
@@ -244,7 +240,7 @@ export const servicesData: Service[] = [
         },
       ],
     },
-    
+
     testimonials: {
       row1: [
         {
@@ -283,7 +279,7 @@ export const servicesData: Service[] = [
         },
       ]
     },
-    
+
     salarySurvey: {
       heading: "Robert Walters 2025\nSalary Survey",
       subtext: "Explore the salary and hiring trends in your industry.",
@@ -297,7 +293,7 @@ export const servicesData: Service[] = [
       ],
       label: "5K+ Active Members",
       image: "/assets/images/about/about-side2.png",
-    },    
+    },
 
     dynamicserviceDetail: [
       {
@@ -344,15 +340,13 @@ export const servicesData: Service[] = [
         answer: "Yes, we support bulk hiring with dedicated recruiter teams.",
       },
     ],
-    
+
     servicerekuta: {
       sectionTitle: "Recruiting Across All Career Levels.",
       sectionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       image: "/assets/images/about/about-side1.png"
-    },    
-    
-    
+    },
+
+
   },
-  
-  
 ];

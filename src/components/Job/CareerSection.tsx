@@ -207,13 +207,11 @@ export default function CareerSection() {
   }, []);
 
   return (
-    <div className="career-section section-padding pt-0">
+    <div className="career-section section-padding">
       <div className="container">
         <h1 className="career-title text-center mb-5">
           Ready for your next career move?
         </h1>
-
-        {/* Owl Carousel Tabs */}
         <div className="career-tabs owl-carousel">
           {careerTabs.map((tab) => (
             <button
@@ -225,8 +223,6 @@ export default function CareerSection() {
             </button>
           ))}
         </div>
-
-        {/* Active Tab Content */}
         <div className="tab-content mt-4">
           {careerTabs
             .filter((tab) => tab.id === activeTab)

@@ -26,9 +26,8 @@ const inter = Inter({
   display: "swap",
 });
 
-// ✅ VisualSans font integration
 const visualSans = localFont({
-  src: "../../public/assets/fonts/wfvisual/WFVisualSansVF.ttf",
+  src: "../../public/assets/fonts/wf-visual-sans/WFVisualSansVF.ttf",
   variable: "--font-visual-sans",
   display: "swap",
 });

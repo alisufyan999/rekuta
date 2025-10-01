@@ -115,7 +115,7 @@ const Profile: React.FC = () => {
                     width={50} 
                     height={50} 
                   />
-                  <span className="d-flex align-items-center gap-2">Saved jobs and alerts</span>
+                  <span className="d-flex align-items-center gap-2">Saved jobs & alerts</span>
                   <span className="rk-profile-arrow" aria-hidden>›</span>
                 </button>
               </li>

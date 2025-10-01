@@ -14,7 +14,7 @@ const Banner: React.FC = () => {
   return (
     <section className="section-padding">
       <div className="container">
-        <div className="blogmain-hero position-relative rounded-4 overflow-hidden p-4 p-lg-5">
+        <div className="blogmain-hero position-relative rounded-4 overflow-hidden p-4 p-lg-5 rk-hero">
           {/* badge */}
           <div className="text-center mb-3">
             <span className="badge blogmain-badge">Insights &amp; Ideas</span>
@@ -40,7 +40,7 @@ const Banner: React.FC = () => {
                 aria-label="Search blog"
                 required
               />
-              <button type="submit" className="btn blogmain-btn">
+              <button type="submit" className="blogmain-btn">
                 <span className="me-1">Search</span>
                 <i className="fas fa-search" aria-hidden="true"></i>
               </button>
