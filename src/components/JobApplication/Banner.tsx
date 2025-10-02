@@ -17,7 +17,7 @@ const Banner: React.FC = () => {
             <div className="jobapplication-card position-relative rounded-4 p-4 p-lg-5">
             {/* bookmark */}
             <button
-            className="btn jobapplication-save position-absolute end-0 top-0 translate-middle-y me-3 me-lg-4 mt-3 mt-lg-4"
+            className="btn jobapplication-save position-absolute end-0 top-0 me-3 me-lg-4 mt-3 mt-lg-4"
             aria-label="Save job"
             type="button"
             title="Save"

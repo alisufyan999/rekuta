@@ -6,13 +6,13 @@ import {
   faAngleRight,
   faFileLines,
   faCloudArrowUp,
-  
+
 } from '@fortawesome/free-solid-svg-icons';
 import {
-    faFacebookF,
-    faTwitter,
-    faLinkedinIn,
-  } from '@fortawesome/free-brands-svg-icons';
+  faFacebookF,
+  faTwitter,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons';
 
 type Preview = {
   url?: string;
@@ -99,196 +99,196 @@ const JobApply: React.FC = () => {
 
   return (
     <section className="jobapplication-apply section-padding pt-0">
-        <div className="container">
-            <div className="row g-4">
-            {/* Left: Form panel */}
-            <div className="col-12 col-lg-6">
+      <div className="container">
+        <div className="row g-4">
+          {/* Left: Form panel */}
+          <div className="col-12 col-lg-6">
             <div className="jobapplication-panel p-3 p-md-4 rounded-4">
-                <h4 className="jobapplication-heading mb-3">Start Your Application</h4>
+              <h4 className="jobapplication-heading mb-3">Start Your Application</h4>
 
-                <form className="jobapplication-form" onSubmit={onSubmit}>
+              <form className="jobapplication-form" onSubmit={onSubmit}>
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Full Name (Required)</label>
-                    <input className="form-control jobapplication-input" placeholder="John Doe" required />
+                  <label className="form-label jobapplication-label">Full Name (Required)</label>
+                  <input className="form-control jobapplication-input" placeholder="John Doe" required />
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Email Address (Required)</label>
-                    <input type="email" className="form-control jobapplication-input" placeholder="abc@company.com" required />
+                  <label className="form-label jobapplication-label">Email Address (Required)</label>
+                  <input type="email" className="form-control jobapplication-input" placeholder="abc@company.com" required />
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Phone Number (Optional)</label>
-                    <input className="form-control jobapplication-input" placeholder="+123 456 789 74" />
+                  <label className="form-label jobapplication-label">Phone Number (Optional)</label>
+                  <input className="form-control jobapplication-input" placeholder="+123 456 789 74" />
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Portfolio / GitHub (Optional)</label>
-                    <input className="form-control jobapplication-input" placeholder="myportfolio.com" />
+                  <label className="form-label jobapplication-label">Portfolio / GitHub (Optional)</label>
+                  <input className="form-control jobapplication-input" placeholder="myportfolio.com" />
                 </div>
 
                 {/* Resume Upload */}
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Resume / CV Upload (Required)</label>
-                    <div
+                  <label className="form-label jobapplication-label">Resume / CV Upload (Required)</label>
+                  <div
                     className="jobapplication-upload text-center p-4"
                     onDrop={resume.onDrop}
                     onDragOver={resume.onDragOver}
-                    >
+                  >
                     {!resume.preview ? (
-                        <>
+                      <>
                         <FontAwesomeIcon icon={faCloudArrowUp} className="jobapplication-upload-icon mb-2" />
                         <p className="mb-1">Choose a file or drag &amp; drop it here</p>
                         <p className="text-muted small mb-3">JPEG, PNG, PDF, and DOC formats, up to 50MB</p>
                         <label className="btn btn-primary btn-pill width-fit mb-0" htmlFor="resumeFile">Browse File</label>
                         <input id="resumeFile" type="file" className="visually-hidden" onChange={resume.onChange} required />
-                        </>
+                      </>
                     ) : (
-                        <div className="jobapplication-preview">
+                      <div className="jobapplication-preview">
                         {resume.preview.isImage ? (
-                            <img src={resume.preview.url} alt={resume.preview.name} className="img-fluid jobapplication-preview-img mb-2" />
+                          <img src={resume.preview.url} alt={resume.preview.name} className="img-fluid jobapplication-preview-img mb-2" />
                         ) : (
-                            <div className="jobapplication-file d-inline-flex align-items-center gap-2 mb-2">
+                          <div className="jobapplication-file d-inline-flex align-items-center gap-2 mb-2">
                             <FontAwesomeIcon icon={faFileLines} />
                             <span className="small">{resume.preview.name}</span>
-                            </div>
+                          </div>
                         )}
                         <div className="text-muted small mb-2">
-                            {resume.preview.type} • {resume.preview.sizeKB} KB
+                          {resume.preview.type} • {resume.preview.sizeKB} KB
                         </div>
                         <div className="d-flex justify-content-center gap-2">
-                            <label className="btn jobapplication-btn mb-0" htmlFor="resumeReplace">Replace</label>
-                            <input id="resumeReplace" type="file" className="visually-hidden" onChange={resume.onChange} />
-                            <button type="button" className="btn btn-outline-secondary" onClick={() => resume.setFile(null)}>Remove</button>
+                          <label className="btn jobapplication-btn mb-0" htmlFor="resumeReplace">Replace</label>
+                          <input id="resumeReplace" type="file" className="visually-hidden" onChange={resume.onChange} />
+                          <button type="button" className="btn btn-outline-secondary" onClick={() => resume.setFile(null)}>Remove</button>
                         </div>
-                        </div>
+                      </div>
                     )}
-                    </div>
+                  </div>
                 </div>
 
                 {/* Cover Letter Upload */}
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Cover Letter / Short Introduction (Optional)</label>
-                    <div
+                  <label className="form-label jobapplication-label">Cover Letter / Short Introduction (Optional)</label>
+                  <div
                     className="jobapplication-upload text-center p-4"
                     onDrop={cover.onDrop}
                     onDragOver={cover.onDragOver}
-                    >
+                  >
                     {!cover.preview ? (
-                        <>
+                      <>
                         <FontAwesomeIcon icon={faCloudArrowUp} className="jobapplication-upload-icon mb-2" />
                         <p className="mb-1">Choose a file or drag &amp; drop it here</p>
                         <p className="text-muted small mb-3">JPEG, PNG, PDF, and DOC formats, up to 50MB</p>
                         <label className="btn btn-primary btn-pill width-fit mb-0" htmlFor="coverFile">Browse File</label>
                         <input id="coverFile" type="file" className="visually-hidden" onChange={cover.onChange} />
-                        </>
+                      </>
                     ) : (
-                        <div className="jobapplication-preview">
+                      <div className="jobapplication-preview">
                         {cover.preview.isImage ? (
-                            <img src={cover.preview.url} alt={cover.preview.name} className="img-fluid jobapplication-preview-img mb-2" />
+                          <img src={cover.preview.url} alt={cover.preview.name} className="img-fluid jobapplication-preview-img mb-2" />
                         ) : (
-                            <div className="jobapplication-file d-inline-flex align-items-center gap-2 mb-2">
+                          <div className="jobapplication-file d-inline-flex align-items-center gap-2 mb-2">
                             <FontAwesomeIcon icon={faFileLines} />
                             <span className="small">{cover.preview.name}</span>
-                            </div>
+                          </div>
                         )}
                         <div className="text-muted small mb-2">
-                            {cover.preview.type} • {cover.preview.sizeKB} KB
+                          {cover.preview.type} • {cover.preview.sizeKB} KB
                         </div>
                         <div className="d-flex justify-content-center gap-2">
-                            <label className="btn jobapplication-btn mb-0" htmlFor="coverReplace">Replace</label>
-                            <input id="coverReplace" type="file" className="visually-hidden" onChange={cover.onChange} />
-                            <button type="button" className="btn btn-outline-secondary" onClick={() => cover.setFile(null)}>Remove</button>
+                          <label className="btn jobapplication-btn mb-0" htmlFor="coverReplace">Replace</label>
+                          <input id="coverReplace" type="file" className="visually-hidden" onChange={cover.onChange} />
+                          <button type="button" className="btn btn-outline-secondary" onClick={() => cover.setFile(null)}>Remove</button>
                         </div>
-                        </div>
+                      </div>
                     )}
-                    </div>
+                  </div>
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label jobapplication-label">Why are you interested in this role? (Required)</label>
-                    <textarea className="form-control jobapplication-textarea" rows={3} placeholder="Write briefly" required />
+                  <label className="form-label jobapplication-label">Why are you interested in this role? (Required)</label>
+                  <textarea className="form-control jobapplication-textarea" rows={3} placeholder="Write briefly" required />
                 </div>
 
                 <div className="mb-4">
-                    <label className="form-label jobapplication-label">Availability / Notice Period (Required)</label>
-                    <input className="form-control jobapplication-input" placeholder="Write Your Notice Period in days" required />
+                  <label className="form-label jobapplication-label">Availability / Notice Period (Required)</label>
+                  <input className="form-control jobapplication-input" placeholder="Write Your Notice Period in days" required />
                 </div>
 
                 <button className="btn btn-primary btn-pill w-100" type="submit">Apply Now</button>
-                </form>
+              </form>
             </div>
-            </div>
+          </div>
 
-            {/* Right: Job details */}
-            <div className="col-12 col-lg-6">
+          {/* Right: Job details */}
+          <div className="col-12 col-lg-6">
             <div className="jobapplication-right">
-                <h4 className="jobapplication-role mb-2">Senior Front End Developer</h4>
-                <p className="text-muted mb-4">
+              <h4 className="jobapplication-role mb-2">Senior Front End Developer</h4>
+              <p className="text-muted mb-4">
                 We’re looking for a passionate and experienced Senior Front End Developer to join our team.
                 You’ll collaborate closely with designers, product managers, and back-end engineers to deliver
                 seamless, high-performance user experiences. If you love building clean, scalable, and intuitive
                 interfaces, this role is for you.
-                </p>
+              </p>
 
-                <div className="jobapplication-box mb-4 pb-4">
+              <div className="jobapplication-box mb-4 pb-4">
                 <h6 className="jobapplication-subtitle mb-2">Responsibilities</h6>
                 <ul className="jobapplication-points mb-0">
-                    {responsibilities.map((t) => (
+                  {responsibilities.map((t) => (
                     <li key={t}><FontAwesomeIcon icon={faAngleRight} className="me-2" />{t}</li>
-                    ))}
+                  ))}
                 </ul>
-                </div>
+              </div>
 
-                <div className="jobapplication-box mb-4 pb-4">
+              <div className="jobapplication-box mb-4 pb-4">
                 <h6 className="jobapplication-subtitle mb-2">Requirements</h6>
                 <ul className="jobapplication-points mb-0">
-                    {requirements.map((t) => (
+                  {requirements.map((t) => (
                     <li key={t}><FontAwesomeIcon icon={faAngleRight} className="me-2" />{t}</li>
-                    ))}
+                  ))}
                 </ul>
-                </div>
+              </div>
 
-                <div className="jobapplication-box mb-4 pb-4">
+              <div className="jobapplication-box mb-4 pb-4">
                 <h6 className="jobapplication-subtitle mb-2">Nice to Have</h6>
                 <ul className="jobapplication-points mb-0">
-                    {niceToHave.map((t) => (
+                  {niceToHave.map((t) => (
                     <li key={t}><FontAwesomeIcon icon={faAngleRight} className="me-2" />{t}</li>
-                    ))}
+                  ))}
                 </ul>
-                </div>
+              </div>
 
-                <div className="jobapplication-box mb-4 pb-4">
+              <div className="jobapplication-box mb-4 pb-4">
                 <h6 className="jobapplication-subtitle mb-2">Why Join Us?</h6>
                 <ul className="jobapplication-points mb-0">
-                    {whyJoin.map((t) => (
+                  {whyJoin.map((t) => (
                     <li key={t}><FontAwesomeIcon icon={faAngleRight} className="me-2" />{t}</li>
-                    ))}
+                  ))}
                 </ul>
-                </div>
+              </div>
 
-                {/* Social Media Row */}
-                <div className="jobapplication-social mt-4 d-flex align-items-center gap-3">
+              {/* Social Media Row */}
+              <div className="jobapplication-social mt-4 d-flex align-items-center gap-3">
                 <span className="text-muted small me-2">Like what you see? Share with a friend.</span>
                 <div className="d-flex gap-2">
-                    <a href="#" className="jobapplication-social-icon">
+                  <a href="#" className="jobapplication-social-icon">
                     <FontAwesomeIcon icon={faFacebookF} />
-                    </a>
-                    <a href="#" className="jobapplication-social-icon">
+                  </a>
+                  <a href="#" className="jobapplication-social-icon">
                     <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                    <a href="#" className="jobapplication-social-icon">
+                  </a>
+                  <a href="#" className="jobapplication-social-icon">
                     <FontAwesomeIcon icon={faLinkedinIn} />
-                    </a>
+                  </a>
                 </div>
-                </div>
+              </div>
 
 
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-      
+      </div>
+
     </section>
   );
 };

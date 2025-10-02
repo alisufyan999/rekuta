@@ -170,7 +170,7 @@ h6 {
 
 .form-control,
 .form-select {
-  border-radius: 2rem;
+  border-radius: 2rem !important;
 }
 
 .btn-dark {
@@ -1720,17 +1720,17 @@ section.whychoose {
   border-right: 0;
 }
 
-.joblisting-search .joblisting-input .form-control {
+/* .joblisting-search .joblisting-input .form-control {
   border-left: 0;
   border-radius: 999px;
-}
+} */
 
-.joblisting-search .joblisting-input {
+/* .joblisting-search .joblisting-input {
   border-radius: 999px;
   overflow: hidden;
   border: 1px solid #e6ebf5;
   background: #fff;
-}
+} */
 
 .joblisting-btn {
   background: #1b57e0;
@@ -1747,12 +1747,22 @@ section.whychoose {
 }
 
 /* filter pills */
-.joblisting-pill {
+/* .joblisting-pill {
   width: auto;
   padding: .5rem .9rem;
   border-radius: 999px;
   border: 1px solid #e6ebf5;
-  background: #f8f9fc;
+  /* background: #f8f9fc; */
+/* } */
+.form-select {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.form-select:focus {
+  border: none;
+  box-shadow: none;
 }
 
 /* cards */
@@ -1826,8 +1836,11 @@ section.whychoose {
 .joblisting-card:hover .joblisting-title,
 .joblisting-card:hover .joblisting-sub,
 .joblisting-card:hover .joblisting-meta,
-.joblisting-card:hover .joblisting-meta li {
+.joblisting-card:hover .joblisting-meta li,
+.joblisting-card:hover .joblisting-meta li svg,
+.joblisting-card:hover .joblisting-meta li svg path {
   color: #fff !important;
+  fill: #fff !important;
 }
 
 .joblisting-card:hover .joblisting-badge {
@@ -2682,6 +2695,10 @@ section.whychoose {
     padding: 3rem 0;
   }
 
+  .jobdescription-save {
+    transform: translate(0px, 5px) !important;
+  }
+
   .active-dot:after {
     display: none;
   }
@@ -2917,4 +2934,39 @@ section.whychoose {
 .career-tabs .owl-nav button.owl-next:hover {
   border: 2px solid #FFFFFF;
   background-color: white 2 80%;
+}
+
+.input-group-text {
+  z-index: 1;
+  position: absolute;
+  top: 1.4rem;
+  left: 1rem;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.joblisting-input input {
+  padding: 1rem 1rem 1rem 2.5rem;
+  box-shadow: 0px 0px 10px 2px #0000001A;
+  border: 2px solid #0E4DC740;
+  background-color: #F1F5F8;
+}
+
+.btnPadding {
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.form-select {
+  background-image: none;
+}
+
+.carrotIcon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6ebf5;
+  border-radius: 999px;
+  width: auto;
+  padding: .5rem .9rem;
+  cursor: pointer;
 }

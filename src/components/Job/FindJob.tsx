@@ -4,15 +4,11 @@ const FindJob = () => {
   return (
     <section className="find-job-section pt-0 pb-0">
       <div className="container text-center">
-        {/* Heading */}
         <h2 className="mb-4 find-job-section-title">Find your next job</h2>
-
-        {/* Search Form */}
         <form>
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="row g-3 justify-content-center">
-                {/* Job Title Input */}
                 <div className="col-12 col-md-5">
                   <div className="input-group find-job-input-group">
                     <span className="">
@@ -25,8 +21,6 @@ const FindJob = () => {
                     />
                   </div>
                 </div>
-
-                {/* Location Input */}
                 <div className="col-12 col-md-5">
                   <div className="input-group find-job-input-group">
                     <span className="">
